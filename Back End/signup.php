@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO users (name, email, phone, address, password) VALUES ('$name', '$email', '$phone', '$address', '$hashed_password')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "<script>alert('Registration Successful.'); window.location.href = 'login.html';</script>";
+            echo "<script>alert('Registration Successful.'); window.location.href = '../Front End/login.html';</script>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
