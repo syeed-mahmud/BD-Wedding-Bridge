@@ -1,26 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     /* background-image:  url(images/wedding-plan-new.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px);
 }
 
 body.loginpage{
-    /* font-family: 'Poppins', sans-serif; */
     background-image:  url(images/wedding-plan-new.jpg);
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    backdrop-filter: blur(10px);
 }
 
-/* body.sidepage{
-    background-color: #ccbbbf;
-    backdrop-filter: blur(10px);
+body.sidepage{
+    background-image: url(images/bg3.jpg);
+    background-repeat: repeat;
+}
 
-} */
+body.FormPage{
+    background-image: url(images/form-bg\ \(2\).jpg);
+    backdrop-filter: blur(30px);
+}
 
 
 /*------------ Login container ------------*/
@@ -68,39 +74,24 @@ body.loginpage{
 }
 
 .card {
-    border-radius: 20px;
+    border-radius: 10px;
+    /* border: 5px solid; */
+  border-color: #1b1212a6;
+  box-shadow: 0 6px 8px #00000088;
+
   }
 
   .card-img-top{
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+     border: 5px solid;
+  border-color: rgba(27, 18, 18, 0.652);
+  box-shadow: 0 6px 8px #00000088;
+  
   }
-
-  /* nav{
-    background-color: #babfc2;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-nav ul li{
-    display: inline-block;
-    margin: 0 15px;
-    padding: 0;
-    font-size: 14px;
-
-}
-
-nav ul{
-    margin: 0 auto;
-    text-align: center;
-    padding: 30px;
-
-}
-
-nav li a:hover{
-    text-decoration: underline;
-} */
 
 .container{
     margin-top: 20px;
@@ -114,4 +105,13 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y : -145px;
+}
+
+.regForm{
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #b38c95;
+    padding: 20px;
+    box-shadow: 0 8px 8px #00000088;
+
 }

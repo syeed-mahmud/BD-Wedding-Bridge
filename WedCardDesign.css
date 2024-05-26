@@ -1,0 +1,169 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,700,300");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+
+.a {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.a .overlap-group-wrapper {
+  background-color: rgba(255, 255, 255, 1);
+  background: linear-gradient(180deg, rgba(82, 86, 181, 0.56) 0%, rgba(245, 171, 187, 0.56) 82.5%);
+  width: 595px;
+  height: 842px;
+}
+
+.a .overlap-group {
+  position: relative;
+  height: 842px;
+}
+
+.a .rectangle {
+  position: absolute;
+  width: 420px;
+  height: 662px;
+  top: 90px;
+  left: 88px;
+  border-radius: 39px;
+  border: 4px solid;
+  border-color: #495395;
+}
+
+.a .is-yours-to-conquer {
+  width: 267px;
+  height: 334px;
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+
+.a .img {
+  width: 595px;
+  height: 195px;
+  top: 647px;
+  position: absolute;
+  left: 0;
+}
+
+.a .text-wrapper {
+  position: absolute;
+  width: 163px;
+  top: 135px;
+  left: 216px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.a .you-are-invited-to {
+  position: absolute;
+  width: 343px;
+  height: 76px;
+  top: 190px;
+  left: 126px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 300;
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.a .line {
+  position: absolute;
+  width: 323px;
+  height: 1px;
+  top: 186px;
+  left: 146px;
+  object-fit: cover;
+}
+
+.a .ayman-munjerin {
+  position: absolute;
+  width: 412px;
+  top: 287px;
+  left: 92px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.a .date-nov {
+  position: absolute;
+  width: 348px;
+  top: 493px;
+  left: 124px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.a .div {
+  position: absolute;
+  width: 389px;
+  top: 536px;
+  left: 103px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.a .BD-WEDDING-BRIDGE {
+  position: absolute;
+  width: 275px;
+  top: 657px;
+  left: 160px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.a .element {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 578px;
+  left: 258px;
+  object-fit: cover;
+}
