@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background-image:  url(images/wedding-plan-new.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+body.loginpage{
+    background-image:  url(images/wedding-plan-new.jpg);
+}
+
+body.sidepage{
+    background-image: url(images/bg3.jpg);
+    background-repeat: repeat;
+}
+
+body.FormPage{
+    background-image: url(images/form-bg\ \(2\).jpg);
+    backdrop-filter: blur(30px);
+}
+
+
+/*------------ Login container ------------*/
+
+.box-area{
+    width: 980px;
+}
+
+/*------------ Right box ------------*/
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+/*------------ Custom Placeholder ------------*/
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+
+/*------------ For small screens------------*/
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}
+
+.card {
+    border-radius: 10px;
+    /* border: 5px solid; */
+  border-color: #1b1212a6;
+  box-shadow: 0 6px 8px #00000088;
+
+  }
+
+  .card-img-top{
+    border-radius: 10px;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+     border: 5px solid;
+  border-color: rgba(27, 18, 18, 0.652);
+  box-shadow: 0 6px 8px #00000088;
+  
+  }
+
+.container{
+    margin-top: 20px;
+}
+
+header{
+    top: 70px;
+    position: relative;
+    margin-bottom: 10px;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y : -145px;
+}
+
+.regForm{
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #b38c95;
+    padding: 20px;
+    box-shadow: 0 8px 8px #00000088;
+
+}
