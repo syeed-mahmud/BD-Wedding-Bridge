@@ -11,9 +11,48 @@
     <link rel="stylesheet" href="../profile.css">
 </head>
 
-<body>
-    <div class="container">
-        <div class="sidebar bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
+<body class="">
+    <nav class="navbar bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../../images/Logo.png" alt="Logo" width="30px" height="30px"
+                    class="d-inline-block align-text-top">
+                BD Wed Bridge
+            </a>
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="weeding.html">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News Portal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Host Wedding</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Profile
+                    </a>
+                    <ul class="dropdown-menu dropdown-end">
+                        <li><a class="dropdown-item" href="../profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Setting</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container ">
+       <div class="sidebar bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
             <img src="../images/syeed.jpg" alt="Profile Picture" class="profile-pic">
             <h1>Syeed Mahmud</h1>
             <button class="logout-btn">LOG OUT</button>
@@ -22,7 +61,7 @@
             <div class="profile-header flex justify-center items-center">
                 <h2 class="label fs-1 border-b-4 border-dashed fw-5">Personal Profile</h2>
 
-              
+
             </div>
 
             <div class=" flex flex-row justify-around">
@@ -83,7 +122,7 @@
                 </div>
                 <div class="flex flex-col ite">
                     <img class=" w-[200px]" src="../images/Logo.png" alt="">
-                      <div class="status w-full text-center fs-5 px-5 py-2">Registered Wedding</div>
+                    <div class="status w-full text-center fs-5 px-5 py-2">Registered Wedding</div>
                 </div>
             </div>
 
