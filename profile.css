@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #d3cce3, #e9e4f0);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.sidebar h1 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logout-btn {
+    margin-top: auto;
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-header h2 {
+    margin: 0;
+}
+
+.status {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-item .label {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-item .value {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: #666;
+}
+
+.update-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.update-link:hover {
+    text-decoration: underline;
+}
+
+.linked-accounts img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.delete-account {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delete-account:hover {
+    text-decoration: underline;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #999;
+}

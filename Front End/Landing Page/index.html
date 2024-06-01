@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
   <link href="bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- tailwind & daisyui cdn -->
 
@@ -186,7 +187,7 @@
           <img src="../../images/Logo.png" alt="Logo" width="30px" height="30px" class="d-inline-block align-text-top">
           BD Wed Bridge
         </a>
-  
+
         <ul class="nav nav-tabs">
           <li class="nav-item">
             <a class="nav-link" href="#">Contact Us</a>
@@ -205,13 +206,15 @@
               Profile
             </a>
             <ul class="dropdown-menu dropdown-end">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="../profile.html">Profile</a></li>
               <li><a class="dropdown-item" href="#">Setting</a></li>
-              <li><hr class="dropdown-divider"></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
               <li><a class="dropdown-item" href="#">Log out</a></li>
             </ul>
           </li>
-        </ul>    
+        </ul>
       </div>
     </nav>
   </header>
@@ -282,36 +285,93 @@
   ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
-      <div class="text-center p-2 m-5">
+    <div class="container mx-auto marketing">
+      <div class="text-center p-2 m-5 w-max mx-auto border-b-2 border-gray-200 border-dashed">
         <p class="  fs-1 fw-normal">Upcoming WEDDINGS</p>
         <h4 class=" fs-5 fw-normal">Join Most recent Weddings</h4>
       </div>
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-
-        <div class="d-flex justify-content-evenly">
-          <div class="card h-full position-relative rounded-4">
-            <img src="../../images/4.png" class="  h-full rounded-4" alt="...">
-            <div class="position-absolute  bottom-0 start-0">
-              <p class="  fs-4 fw-3">Salman & Disha’s Wedding</p>
-            </div>
-          </div>
-          <div class="card h-full position-relative rounded-4">
-            <img src="../../images/2.jpg" class="  h-full rounded-4" alt="...">
-            <div class="position-absolute  bottom-0 start-0">
-              <p class="  fs-4 fw-3">Salman & Disha’s Wedding</p>
-            </div>
-          </div>
-          <div class="card h-full position-relative rounded-4">
-            <img src="../../images/3.jpg" class="  h-full rounded-4" alt="...">
-            <div class="position-absolute  bottom-0 start-0">
-              <p class="  fs-4 fw-3">Salman & Disha’s Wedding</p>
-            </div>
-          </div>
-
+      <!-- <div class="  grid grid-cols-3 gap-4 p-2">
+        <div>
+          <img class=" rounded-2xl" src="../../images/2.jpg" alt="">
         </div>
+        <div>
+          <img class="rounded-2xl" src="../../images/2.jpg" alt="">
+        </div>
+        <div>
+          <img class="rounded-2xl" src="../../images/2.jpg" alt="">
+        </div>
+
+      </div> -->
+
+      <div id="carouselExampleIndicators" class="carousel h-100 w-100 mx-auto align-middle slide px-10 ">
+        <div class="carousel-indicators ">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner rounded-2xl">
+          <div class="carousel-item active">
+            <div class="h-100   grid grid-cols-3 gap-2 ">
+              <div >
+                <img class=" rounded-2xl h-full w-100" src="../../images/2.jpg" alt="">
+              </div>
+              <div>
+                <img class="rounded-2xl h-full w-100" src="../../images/3.jpg" alt="">
+              </div>
+              <div>
+                <img class="rounded-2xl h-full w-100" src="../../images/4.png" alt="">
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="h-100   grid grid-cols-3 gap-2 p-2">
+              <div>
+                <img class=" rounded-2xl h-full w-100" src="../../images/5.jpg" alt="">
+              </div>
+              <div>
+                <img class="rounded-2xl h-full w-100" src="../../images/6.jpg" alt="">
+              </div>
+              <div>
+                <img class="rounded-2xl h-full w-100" src="../../images/7.jpg" alt="">
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="h-100   grid grid-cols-3 gap-2 p-2">
+              <div>
+                <img class=" rounded-2xl h-full w-100" src="../../images/8.jpg" alt="">
+              </div>
+              <div>
+                <img class="rounded-2xl h-full w-100" src="../../images/9.jpg" alt="">
+              </div>
+              <div>
+                <img class="rounded-2xl h-full w-100" src="../../images/10.jpg" alt="">
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev  " type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-black h-12 w-12 p-3 rounded-lg" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon  bg-black h-12 w-12 p-3 rounded-lg" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Three columns of text below the carousel -->
+      <div class="">
+
 
 
 
