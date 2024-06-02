@@ -34,10 +34,15 @@ $account_number = $_POST['acc_no'];
 $account_branch = $_POST['bb_name'];
 $account_routing = $_POST['br_no'];
 
-// Handle image upload
-$target_dir = "uploads/";
+$target_dir = "../Wedding_images/";
 $target_file = $target_dir . basename($_FILES["wedding_image"]["name"]);
-move_uploaded_file($_FILES["wedding_image"]["tmp_name"], $target_file);
+if (move_uploaded_file($_FILES["wedding_image"]["tmp_name"], $target_file)) {
+    // File uploaded successfully
+} else {
+    echo "Sorry, there was an error uploading your file.";
+}
+
+
 
 // Insert data into bride-groom table
 $sql1 = "INSERT INTO `bride-groom` (G_first_name, G_last_name, G_username, G_email, G_contact, B_first_name, B_last_name, B_username, B_email, B_contact, wedding_image) 

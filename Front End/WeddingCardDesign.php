@@ -1,3 +1,25 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "wedding_bridge";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+?>
+<?php
+if (!isset($_SESSION['username'] )) {
+    header("Location: ../Back End/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
