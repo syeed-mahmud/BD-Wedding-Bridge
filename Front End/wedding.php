@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Wedding</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     
@@ -18,40 +19,9 @@
 
 <body class="sidepage">
 
-  <nav class="navbar bg-body-tertiary sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="../images/Logo.png" alt="Logo" width="30px" height="30px" class="d-inline-block align-text-top">
-        BD Wedding Bridge
-      </a>
-
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="weeding.html">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">News Portal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Host Wedding</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Profile
-          </a>
-          <ul class="dropdown-menu dropdown-end">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Setting</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Log out</a></li>
-          </ul>
-        </li>
-      </ul>    
-    </div>
-  </nav>
+<?php
+include("../Back End/header.php")
+?>
 
   <div class="container flex-auto">
         <div class="container text-center">
@@ -146,6 +116,9 @@
             </div>
           </div>
     </div>
+<?php
+include("../Back End/footer.php")
+?>
 
 </body>
 </html>
