@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Password is correct, set session variables
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
-                echo "<script>alert('Login successful.'); window.location.href = '../Back End/welcome.php';</script>";
+                echo "<script>alert('Login successful.'); window.location.href = '../Front End/profile.php';</script>";
             } else {
                 echo "<script>alert('Wrong email or password.'); window.location.href = '../Front End/login.html';</script>";
             }

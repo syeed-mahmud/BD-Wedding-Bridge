@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Host Wedding</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -14,50 +15,15 @@
 
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav class="navbar bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="../images/Logo.png" alt="Logo" width="30px" height="30px" class="d-inline-block align-text-top">
-            BD Wedding Bridge
-          </a>
-    
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="weeding.html">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">News Portal</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Host Wedding</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Profile
-              </a>
-              <ul class="dropdown-menu dropdown-end">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Setting</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Log out</a></li>
-              </ul>
-            </li>
-          </ul>    
-        </div>
-      </nav>
+<body class="FormPage">
+  <?php
+  include("../Back End/header.php")
+  ?>
 
       <!-- Form Create -->
 
-      
-      <div>
-      
-      <!-- First Stage -->
         <section class="container my-10 w-50 text-light p-2 regForm ">
-        <form class="row g-3 p-3">
+        <form class="row g-3 p-3" id="WedRegForm" action="../Back End/WedReg.php" method="post" enctype="multipart/form-data">
           
           <div class="col-md-12 text-center">
             <h1 class="text-black fw-light" style="font-size: 1.5rem; width: auto; height: 30px;">Groom Information</h1>
@@ -65,26 +31,26 @@
           </div>
             <div class="col-md-4">
                 <label for="G_first_name" class="form-label">First name</label>
-                <input type="text" class="form-control" id="G_first_name" required>
+                <input type="text" class="form-control" id="G_first_name" name="G_first_name" required>
               </div>
               <div class="col-md-4">
                 <label for="G_last_name" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="G_last_name" required>
+                <input type="text" class="form-control" id="G_last_name" name="G_last_name" required>
               </div>
               <div class="col-md-4">
                 <label for="GroomUsername" class="form-label">Username</label>
                 <div class="input-group">
                   <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                  <input type="text" class="form-control" id="GroomUsername"  aria-describedby="inputGroupPrepend2" required>
+                  <input type="text" class="form-control" id="GroomUsername" name="GroomUsername" aria-describedby="inputGroupPrepend2" required>
                 </div>
               </div>
             <div class="col-md-6">
               <label for="inputEmailG" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmailG" required>
+              <input type="email" class="form-control" id="inputEmailG" name="inputEmailG" required>
             </div>
             <div class="col-md-6">
               <label for="inputContactG" class="form-label">Contact</label>
-              <input type="number" class="form-control" id="inputContactG" required>
+              <input type="number" class="form-control" id="inputContactG" name="inputContactG" required>
             </div>
             
             
@@ -94,129 +60,112 @@
             </div>
               <div class="col-md-4">
                   <label for="B_first_name" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="B_first_name" required>
+                  <input type="text" class="form-control" id="B_first_name" name="B_first_name" required>
                 </div>
                 <div class="col-md-4">
                   <label for="B_last_name" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="B_last_name" required>
+                  <input type="text" class="form-control" id="B_last_name" name="B_last_name" required>
                 </div>
                 <div class="col-md-4">
                   <label for="BrideUsername" class="form-label">Username</label>
                   <div class="input-group">
                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                    <input type="text" class="form-control" id="BrideUsername"  aria-describedby="inputGroupPrepend2" required>
+                    <input type="text" class="form-control" id="BrideUsername" name="BrideUsername"  aria-describedby="inputGroupPrepend2" required>
                   </div>
                 </div>
               <div class="col-md-6">
                 <label for="inputEmailB" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmailB" required>
+                <input type="email" class="form-control" id="inputEmailB" name="inputEmailB" required>
               </div>
               <div class="col-md-6">
                 <label for="inputContactB" class="form-label">Contact</label>
-                <input type="number" class="form-control" id="inputContactB" required>
+                <input type="number" class="form-control" id="inputContactB" name="inputContactB" required>
               </div>
-
           
-            <div class="col-12 d-flex justify-content-end">
-              <button type="button" class="btn btn-primary">Next</button>
-            </div>
-          </form>
-       </section>
 
-       <!-- Second Stage -->
-       <section class="container my-10 w-50 text-light p-2 regForm ">
-        <form class="row g-3 p-3">
-          
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-center pt-3">
             <h1 class="text-black fw-light" style="font-size: 1.5rem; width: auto; height: 30px;">Wedding Information</h1>
             <hr style="width: 100%; border: 2px solid #000000;">
           </div>
+
             <div class="col-md-12">
                 <label for="wedding_image">Wedding Image:</label>
                 <input type="file" id="wedding_image" name="wedding_image" required><br>
               </div>
+
               <div class="col-md-12">
                 <label for="WedLocation" class="form-label">Wedding Location</label>
-                <input type="text" class="form-control" id="WedLocation" required>
+                <input type="text" class="form-control" id="WedLocation" name="WedLocation" required>
               </div>
               <div class="col-md-6">
                 <label for="StartDate" class="form-label">Start Date</label>
-                <input type="date" class="form-control" id="StartDate" required>
+                <input type="date" class="form-control" id="StartDate" name="StartDate"  required>
               </div>
               <div class="col-md-6">
                 <label for="EndDate" class="form-label">Start Date</label>
-                <input type="date" class="form-control" id="EndDate" required>
+                <input type="date" class="form-control" id="EndDate" name="EndDate" required>
               </div>
               
             <div class="col-md-12">
               <label for="program_list" class="form-label">Wedding Day Program List</label>
-              <textarea class="form-control" id="program_list" required></textarea>
+              <textarea class="form-control" id="program_list" name="program_list" required></textarea>
             </div>
 
             <div class="col-md-12">
               <label for="Food_list" class="form-label">Wedding Food</label>
-              <textarea class="form-control" id="Food_list" required></textarea>
+              <textarea class="form-control" id="Food_list" name="Food_list" required></textarea>
             </div>
 
             <div class="col-md-12">
               <label for="Accommodation" class="form-label">Accommodation</label>
-              <textarea class="form-control" id="Accommodation" required></textarea>
-            </div>          
-            <div class="col-12 d-flex justify-content-between">
-              <button type="button" class="btn btn-primary">Previous</button>
-              <button type="button" class="btn btn-primary">Next</button>
-            </div>
-          </form>
-       </section>
-
-       <!-- Third Stage -->
-       <section class="container my-10 w-50 text-light p-2 regForm ">
-        <form class="row g-3 p-3">
+              <textarea class="form-control" id="Accommodation" name="Accommodation" required></textarea>
+              </div>
           
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 text-center pt-3">
             <h1 class="text-black fw-light" style="font-size: 1.5rem; width: auto; height: 30px;">Payment Receiving Information</h1>
             <hr style="width: 100%; border: 2px solid #000000;">
           </div>
 
 
           <div class="col-md-6">
-          <label for="bank_name" class="form-label">Bank Name</label>
-          <select class="form-select" aria-label="bank_name" id="bank_name" required>
-            <option selected>Select Bank</option>
-            <option value="1">Standard Chartered</option>
-            <option value="2">Eastern Bank PLC</option>
-            <option value="3">Bank Asia PLC</option>
-            <option value="3">Brac Bank</option>
-          </select>
-        </div>
+            <label for="bank_name" class="form-label">Bank Name</label>
+            <select class="form-select" aria-label="bank_name" id="bank_name" name="bank_name" required>
+              <option selected>Select Bank</option>
+              <option value="1">Standard Chartered</option>
+              <option value="2">Eastern Bank PLC</option>
+              <option value="3">Bank Asia PLC</option>
+              <option value="4">Brac Bank</option>
+            </select>
+          </div>
 
           <div class="col-md-6">
                 <label for="acc_name" class="form-label">Account Name</label>
-                <input type="text" class="form-control" id="acc_name" required>
+                <input type="text" class="form-control" id="acc_name" name="acc_name" required>
               </div>
               <div class="col-md-12">
                 <label for="acc_no" class="form-label">Account Number</label>
-                <input type="text" class="form-control" id="acc_no" required>
+                <input type="text" class="form-control" id="acc_no" name="acc_no" required>
               </div>
 
               <div class="col-md-6">
                 <label for="bb_name" class="form-label">Branch Name</label>
-                <input type="text" class="form-control" id="bb_name" required>
+                <input type="text" class="form-control" id="bb_name" name="bb_name" required>
               </div>
+
             <div class="col-md-6">
               <label for="br_no" class="form-label">Routing Number</label>
-              <input type="number" class="form-control" id="br_no" required>
+              <input type="number" class="form-control" id="br_no" name="br_no" required>
             </div>
 
-            <div class="col-12 d-flex justify-content-between">
-              <button type="button" class="btn btn-primary">Previous</button>
+            <div class="col-12 d-flex justify-content-end">
               <button type="submit" class="btn btn-primary">Confirm Registration</button>
             </div>
-
 
           </form>
        </section>
       </div>
-    
+      <?php
+      include("../Back End/footer.php")
+      ?>
 </body>
 </html>

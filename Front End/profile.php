@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "wedding_bridge";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../Back End/login.php");
+    exit();
+}
+
+$user_id = $_SESSION['user_id'];
+
+
+$query = $conn->prepare("SELECT name, email, phone, address FROM users WHERE id = ?");
+$query->bind_param("i", $user_id);
+$query->execute();
+$query->bind_result($name, $email, $phone, $address);
+$query->fetch();
+$query->close();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,64 +38,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../profile.css">
+    <link rel="stylesheet" href="../Back End/login.php">
 </head>
 
 <body class="">
-    <nav class="navbar bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-            <div class=" flex flex-row justify-center items-center">
-                <img src="../../images/Logo.png" alt="Logo" width="100px" height="60px" class="d-inline-block align-text-top">
-                <a class="navbar-brand" href="#"> BD Wed Bridge</a>
-              </div>
-      
-
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" href="../Front End/Landing Page/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="weeding.html">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">News Portal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Host Wedding</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="profile.html" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Profile
-                    </a>
-                    <ul class="dropdown-menu dropdown-end">
-                        <li><a class="dropdown-item" href="../profile.html">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Setting</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Log out</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<?php
+include("../Back End/header.php")
+?>
 
     <div class="container ">
        <div class="sidebar bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
             <img src="../images/syeed.jpg" alt="Profile Picture" class="profile-pic">
-            <h1>Syeed Mahmud</h1>
+            <h1> <?php echo htmlspecialchars($name); ?></h1>
             <button class="btn  flex justify-center items-center gap-1">
                 <img class=" w-10" src="../images/settingslogo.png" alt="">
                 <p class="btn text-lg hover:text-xl">Settings</p>
             </button>
-            <button class="logout-btn">LOG OUT</button>
         </div>
         <div class="main-content bg-pink-50">
             <div class="profile-header flex justify-center items-center">
@@ -76,42 +72,31 @@
                     <div class="info-item flex flex-col justify-center items-start">
                         <span class=" fs-4">Name</span>
                         <div class=" flex gap-2">
-                            <span class="value">Syeed Mahmud</span>
-                            <a href="#" class="update-link">Update</a>
+                            <span class="value"><?php echo htmlspecialchars($name); ?></span>
                         </div>
                     </div>
                     <div class="info-item flex flex-col justify-center items-start">
                         <span class=" info-item  fs-4">Phone Number</span>
                         <div class=" flex gap-2">
-                            <span class="value">+880-01608236985</span>
-                            <a href="#" class="update-link">Update</a>
+                            <span class="value"><?php echo htmlspecialchars($phone); ?></span>
+                            
                         </div>
                     </div>
                     <div class="info-item flex flex-col justify-center items-start">
                         <span class=" info-item  fs-4">Address</span>
                         <div class=" flex gap-2">
-                            <span class="value">Bashundhara R/A, Gulshan, Dhaka 1212</span>
-                            <a href="#" class="update-link">Update</a>
+                            <span class="value"><?php echo htmlspecialchars($address); ?></span>
+                            
                         </div>
                     </div>
                     <div class="info-item flex flex-col justify-center items-start">
                         <span class=" fs-4">Email</span>
                         <div>
-                            <span class="value">S.Mahmud2312@Gmail.Com</span>
-                            <a href="#" class="update-link">Update</a>
+                            <span class="value"><?php echo htmlspecialchars($email); ?></span>
+                            
                         </div>
                     </div>
-                    <div class="info-item flex flex-col justify-center items-start">
-                        <p class=" fs-4 text-black">Password</p>
-                        <div class=" flex gap-2">
-                            <p class="value fs-4">**********</p>
-                            <a href="#" class="update-link">Update</a>
-                        </div>
 
-                        <!-- <span class="label">Password</span>
-                        <span class="value">***********</span> -->
-                        <!-- <span><a href="#" class="update-link">Update</a></span> -->
-                    </div>
                     <div class="info-item flex flex-col justify-center items-start">
                         <p class="text-black fs-4">Linked Accounts</p>
                         <div class="linked-accounts flex">
@@ -129,7 +114,6 @@
                 </div>
                 <div class="flex flex-col ite">
                     <img class=" w-[200px]" src="../images/Logo.png" alt="">
-                    <div class="status w-full text-center fs-5 px-5 py-2">Registered Wedding</div>
                 </div>
             </div>
 
@@ -141,6 +125,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+        <?php
+      include("../Back End/footer.php")
+      ?>
 </body>
 
 </html>
