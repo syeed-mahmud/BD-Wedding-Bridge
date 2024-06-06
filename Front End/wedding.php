@@ -41,6 +41,7 @@ if ($conn->connect_error) {
 <?php
 include("../Back End/header.php")
 ?>
+<div class="container grid grid-cols-4 gap-4">
 <?php
 // Query to retrieve all weddings
 $sql = "SELECT `bride-groom`.WedReg_Id,G_first_name,B_first_name,event_start_date, event_end_date,event_location,wedding_image FROM `bride-groom`,weddingevent WHERE `bride-groom`.`WedReg_Id`=weddingevent.WedReg_Id";
@@ -56,14 +57,11 @@ if (mysqli_num_rows($result) > 0) {
       $Location = $row["event_location"];
       $Image = $row["wedding_image"];
 
-
+ 
       // Create a new card for each wedding
       echo '
-  <div class="container grid grid-cols-4 ">
-        <div class="container text-center">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem">
+  
+                <div class="card" >
                     <img src="../images/' . $Image . '" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">' . $BrideName . ' & ' . $GroomName . ' Wedding</h5>
@@ -72,17 +70,16 @@ if (mysqli_num_rows($result) > 0) {
                       <a href="#" class="btn btn-primary">View Details</a>
                     </div>
                   </div>
-              </div>
+
               
-            </div>
-          </div>
-    </div>
+    
     ';
     }
 } else {
     echo "No weddings found.";
 }
 ?>
+</div>
 <?php
 include("../Back End/footer.php")
 ?>
