@@ -58,7 +58,7 @@ if ($conn->query($sql1) === TRUE) {
         VALUES ('$WedReg_id','$Price', '$bank_name', '$account_name', '$account_number', '$account_branch', '$account_routing')";
 
         if ($conn->query($sql3) === TRUE) {
-            header("Location: ../Front End/wedding.html");
+            header("Location: ../Front End/wedding.php");
         } else {
             echo "Error: " . $sql3 . "<br>" . $conn->error;
         }
