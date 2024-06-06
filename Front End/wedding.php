@@ -1,3 +1,22 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "wedding_bridge";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,93 +41,35 @@
 <?php
 include("../Back End/header.php")
 ?>
+<?php
+// Query to retrieve all weddings
+$sql = "SELECT `bride-groom`.WedReg_Id,G_first_name,B_first_name,event_start_date, event_end_date,event_location,wedding_image FROM `bride-groom`,weddingevent WHERE `bride-groom`.`WedReg_Id`=weddingevent.WedReg_Id";
+$result = mysqli_query($conn, $sql);
 
-  <div class="container flex-auto">
+if (mysqli_num_rows($result) > 0) {
+  while ($row = mysqli_fetch_assoc($result)) {
+      // $WedReg_id = $row["`bride-groom`.WedReg_Id"];
+      $BrideName = $row["B_first_name"];
+      $GroomName = $row["G_first_name"];
+      $StartDate = $row["event_start_date"];
+      $EndDate = $row["event_end_date"];
+      $Location = $row["event_location"];
+      $Image = $row["wedding_image"];
+
+
+      // Create a new card for each wedding
+      echo '
+  <div class="container grid grid-cols-4 ">
         <div class="container text-center">
             <div class="row">
               <div class="col">
                 <div class="card" style="width: 18rem">
-                    <img src="../images/2.jpg" class="card-img-top" alt="...">
+                    <img src="../images/' . $Image . '" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem">
-                    <img src="../images/3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../images/3.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../images/4.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-              </div>
-              
-            </div>
-          </div>
-        
-          <div class="container text-center">
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../images/5.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../images/6.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../images/7.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-              </div>
-              <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="../images/ayman.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">' . $BrideName . ' & ' . $GroomName . ' Wedding</h5>
+                      <p class="card-text text-wrapper">Date : ' . $StartDate . ' to ' . $EndDate . ' </p>
+                      <p class="card-text text-wrapper">Location : ' . $Location . '</p>
+                      <a href="#" class="btn btn-primary">View Details</a>
                     </div>
                   </div>
               </div>
@@ -116,9 +77,19 @@ include("../Back End/header.php")
             </div>
           </div>
     </div>
+    ';
+    }
+} else {
+    echo "No weddings found.";
+}
+?>
 <?php
 include("../Back End/footer.php")
 ?>
 
 </body>
 </html>
+<?php
+// Close the database connection
+mysqli_close($conn);
+?>

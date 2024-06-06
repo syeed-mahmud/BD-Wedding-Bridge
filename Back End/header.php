@@ -1,9 +1,9 @@
 <nav class="navbar bg-body-tertiary sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../Front End/Landing Page/LandingPage.html">
-        <img src="../images/Logo.png" alt="Logo" width="30px" height="30px" class="d-inline-block align-text-top">
-        BD Wedding Bridge
-      </a>
+    <div class=" flex flex-row justify-center items-center">
+          <img src="../images/Logo.png" alt="Logo" width="50px" height="60px" class="d-inline-block align-text-top">
+          <a class="navbar-brand" href="#"> BD Wed Bridge</a>
+        </div>
 
       <ul class="nav nav-tabs">
         <li class="nav-item">
