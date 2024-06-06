@@ -25,13 +25,18 @@
         <section class="container my-10 w-50 text-light p-2 regForm ">
         <form class="row g-3 p-3" id="WedRegForm" action="../Back End/WedReg.php" method="post" enctype="multipart/form-data">
         
-        <div class="col-md-12">
+              <div class="col-md-6">
                   <label for="wedding_id" class="form-label">Wedding Registration ID</label>
                   <div class="input-group">
                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
                     <input type="text" class="form-control" id="wedding_id" name="wedding_id"  aria-describedby="inputGroupPrepend2" required>
                   </div>
-        </div>
+                </div>
+
+              <div class="col-md-6">
+                <label for="price" class="form-label">Per Person Entry Price</label>
+                <input type="text" class="form-control" id="price" name="price" required>
+              </div>
           
           <div class="col-md-12 text-center">
             <h1 class="text-black fw-light" style="font-size: 1.5rem; width: auto; height: 30px;">Groom Information</h1>

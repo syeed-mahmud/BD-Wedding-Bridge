@@ -11,8 +11,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 $WedReg_id = $_POST['wedding_id'];
+$Price = $_POST['price'];
 $groom_first_name = $_POST['G_first_name'];
 $groom_last_name = $_POST['G_last_name'];
 $groom_email = $_POST['inputEmailG'];
@@ -54,8 +54,8 @@ if ($conn->query($sql1) === TRUE) {
 
     if ($conn->query($sql2) === TRUE) {
         // Insert data into bank table
-        $sql3 = "INSERT INTO bank (WedReg_Id, Bank_name, Bank_Acc_Name, Bank_Acc_no, Branch, Routing_no) 
-        VALUES ('$WedReg_id', '$bank_name', '$account_name', '$account_number', '$account_branch', '$account_routing')";
+        $sql3 = "INSERT INTO bank (WedReg_Id, Entry_Price, Bank_name, Bank_Acc_Name, Bank_Acc_no, Branch, Routing_no) 
+        VALUES ('$WedReg_id','$Price', '$bank_name', '$account_name', '$account_number', '$account_branch', '$account_routing')";
 
         if ($conn->query($sql3) === TRUE) {
             header("Location: ../Front End/wedding.html");
