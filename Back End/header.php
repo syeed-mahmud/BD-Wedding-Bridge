@@ -2,7 +2,7 @@
     <div class="container-fluid">
     <div class=" flex flex-row justify-center items-center">
           <img src="../images/Logo.png" alt="Logo" width="50px" height="60px" class="d-inline-block align-text-top">
-          <a class="navbar-brand" href="#"> BD Wed Bridge</a>
+          <a class="navbar-brand" href="#"> BD Wedding Bridge</a>
         </div>
 
       <ul class="nav nav-tabs">

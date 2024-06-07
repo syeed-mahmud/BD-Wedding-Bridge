@@ -48,9 +48,8 @@
           </div>
         </div>
         <div class=" text-center py-2 ">
-          <small class="text-gray-400">&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></small>
+          <small class="text-gray-400">&copy; 2024 BD Wedding Bridge Team, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></small>
         </div>
-
       </footer>
     
 </body>

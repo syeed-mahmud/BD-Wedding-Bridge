@@ -35,7 +35,7 @@
 
               <div class="col-md-6">
                 <label for="price" class="form-label">Per Person Entry Price</label>
-                <input type="text" class="form-control" id="price" name="price" required>
+                <input type="number" class="form-control" id="price" name="price" required>
               </div>
           
           <div class="col-md-12 text-center">
