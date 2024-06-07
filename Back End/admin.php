@@ -69,10 +69,12 @@ if (isset($_GET['delete'])) {
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Admin</title>
 </head>
+
+
 <body style="padding-top: 2px;">
 
 <div class="container flex-col pl-12 pt-5">
-    <div class="flex flex-col gap-10">
+    <div class="flex gap-10">
         <form method="POST" class="card bg-base-100 shadow-xl p-10">
             <p class="text-4xl pb-10">Add News</p>
             <div class="flex gap-5">
@@ -177,4 +179,9 @@ if (isset($_GET['delete'])) {
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<?php
+include("footer.php")
+?>
+
 </html>
