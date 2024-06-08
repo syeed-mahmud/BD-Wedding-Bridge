@@ -1,0 +1,5 @@
+
+.text-outline-red{
+    color: white;
+    -webkit-text-stroke: 2px red;
+}
