@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en">
 
 <head>
   <script src="color-modes.js"></script>
@@ -12,7 +12,7 @@
   <title>Carousel Template · Bootstrap v5.3</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <script src="../../style.css"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -135,17 +135,17 @@
 
   <nav class="navbar bg-body-tertiary sticky-top">
     <div class="container-fluid">
-    <div class=" flex flex-row justify-center items-center">
-          <img src="../../images/Logo.png" alt="Logo" width="50px" height="60px" class="d-inline-block align-text-top">
-          <a class="navbar-brand" href="#"> BD Wedding Bridge</a>
-        </div>
+      <div class=" flex flex-row justify-center items-center">
+        <img src="../../images/Logo.png" alt="Logo" width="50px" height="60px" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="#"> BD Wedding Bridge</a>
+      </div>
 
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link "href="#">News</a>
+          <a class="nav-link " href="#">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">All Weddings</a>
@@ -159,17 +159,20 @@
           </a>
           <ul class="dropdown-menu dropdown-end">
             <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="../Back End/logout.php">Log out</a></li>
           </ul>
         </li>
-      </ul>    
+      </ul>
     </div>
   </nav>
 
   <main>
 
-    <div id="myCarousel" class="carousel container mx-auto slide mb-6" data-bs-ride="carousel">
+    <!-- Banner Section -->
+    <div id="myCarousel" class="carousel  mx-auto slide mb-6" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
           aria-label="Slide 1"></button>
@@ -239,18 +242,7 @@
         <h4 class=" fs-5 fw-normal">Join Most recent Weddings</h4>
       </div>
 
-      <!-- <div class="  grid grid-cols-3 gap-4 p-2">
-        <div>
-          <img class=" rounded-2xl" src="../../images/2.jpg" alt="">
-        </div>
-        <div>
-          <img class="rounded-2xl" src="../../images/2.jpg" alt="">
-        </div>
-        <div>
-          <img class="rounded-2xl" src="../../images/2.jpg" alt="">
-        </div>
 
-      </div> -->
 
       <div id="carouselExampleIndicators" class="carousel h-80 w-100 mx-auto align-middle slide px-10 ">
         <div class="carousel-indicators ">
@@ -263,23 +255,12 @@
         </div>
         <div class="carousel-inner rounded-2xl">
           <div class="carousel-item active ">
-            <!-- <div class="h-100   grid grid-cols-3 gap-2 ">
-              <div>
-                <img class=" rounded-2xl h-full w-100" src="../../images/2.jpg" alt="">
-              </div>
-              <div>
-                <img class="rounded-2xl h-full w-100" src="../../images/3.jpg" alt="">
-              </div>
-              <div>
-                <img class="rounded-2xl h-full w-100" src="../../images/4.png" alt="">
-              </div>
-
-            </div> -->
 
             <div class="row row-cols-1 h-80 px-5 row-cols-md-3 g-4">
               <div class="col rounded-2xl">
                 <div class="card h-80 rounded w-100">
-                  <img src="../../images/2.jpg" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/2.jpg"
+                    class="card-img-top position-relative object-cover object-top  h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -287,7 +268,8 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/3.jpg" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/3.jpg"
+                    class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -295,7 +277,8 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/4.png" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/4.png"
+                    class="card-img-top object-cover object-top  position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -306,18 +289,7 @@
 
           </div>
           <div class="carousel-item">
-            <!-- <div class="h-100   grid grid-cols-3 gap-2 p-2">
-              <div>
-                <img class=" rounded-2xl h-full w-100" src="../../images/5.jpg" alt="">
-              </div>
-              <div>
-                <img class="rounded-2xl h-full w-100" src="../../images/6.jpg" alt="">
-              </div>
-              <div>
-                <img class="rounded-2xl h-full w-100" src="../../images/7.jpg" alt="">
-              </div>
 
-            </div> -->
 
             <div class="row row-cols-1 px-5  h-80  row-cols-md-3 g-4">
               <div class="col rounded-2xl">
@@ -350,18 +322,7 @@
 
           </div>
           <div class="carousel-item">
-            <!-- <div class="h-100   grid grid-cols-3 gap-2 p-2">
-              <div>
-                <img class=" rounded-2xl h-full w-100" src="../../images/8.jpg" alt="">
-              </div>
-              <div>
-                <img class="rounded-2xl h-full w-100" src="../../images/9.jpg" alt="">
-              </div>
-              <div>
-                <img class="rounded-2xl h-full w-100" src="../../images/10.jpg" alt="">
-              </div>
 
-            </div> -->
 
             <div class="row row-cols-1 px-5  h-80  row-cols-md-3 g-4">
               <div class="col rounded-2xl">
@@ -410,23 +371,7 @@
 
         <hr class="featurette-divider">
 
-        <!-- <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
-                class="text-body-secondary">It’ll blow your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose
-              here.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-                fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div> -->
+
 
         <!-- Our Mission Section -->
         <div class="text-center w-3/5 mx-auto">
@@ -465,7 +410,7 @@
         <hr class="featurette-divider">
 
         <!-- FEATURED WEDDINGS Section -->
-        <section class="bg-[#F5F9FF] py-5">
+        <section class=" bg-[#EBD7D7] shadow-xl py-5">
           <div class="text-center w-3/5 mx-auto">
             <h1 class=" text-5xl mb-2">Featured Weddings</h1>
             <p class="text-xl max-w-[350px] font-light mx-auto border-b-4 mb-4 pb-2 border-dashed">Helping students get
@@ -474,7 +419,7 @@
 
           <div class="row row-cols-1 mx-auto row-cols-md-3 g-4 " style="width: 70%;">
             <div class="col">
-              <div class="card h-100">
+              <div class="card h-75 border-2 border-[#21C1BC] shadow-lg">
                 <img src="../../images/2.jpg" class="card-img-top h-100 object-cover" alt="...">
                 <div class="card-body bg-[#EBD7D7]">
                   <h5 class="card-title text-xl">Fahim & Israt’s
@@ -604,10 +549,10 @@
         <!-- Customer review sections -->
 
         <section>
-          <h1 class=" text-3xl my-5 text-center">REVIEW From Our Some Valuable Guest</h1>
+          <h1 class=" text-5xl my-5 text-center">Review From Our Some Valuable Guest</h1>
           <div class="row row-cols-1 mx-auto row-cols-md-3 g-4" style="width: 70%;">
             <div class="col">
-              <div class="card border-none h-100">
+              <div class="card border-none pt-5 h-100">
                 <img src="../../images/600602477a11da74f7b38f53ac7d622d_t.jpeg"
                   class="rounded-circle mx-auto w-[150px] h-[150px]" alt="">
                 <!-- <img src="../../images/1-4.jpg" class="card-img-top rounded-circle" alt="..."> -->
@@ -622,7 +567,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card border-none h-100">
+              <div class="card border-none pt-5 h-100">
                 <img src="../../images/Andrew_Garfield_in_2023_(cropped).jpg"
                   class="rounded-circle mx-auto w-[150px] h-[150px]" alt="">
                 <!-- <img src="../../images/1-4.jpg" class="card-img-top rounded-circle" alt="..."> -->
@@ -637,7 +582,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card border-none h-100">
+              <div class="card border-none pt-5 h-100">
                 <img src="../../images/Bill_Gates_-_2023_-_P062021-967902_(cropped).jpg"
                   class="rounded-circle mx-auto w-[150px] h-[150px]" alt="">
                 <!-- <img src="../../images/1-4.jpg" class="card-img-top rounded-circle" alt="..."> -->
@@ -652,97 +597,56 @@
               </div>
             </div>
         </section>
-
-
-
-
-        <!-- <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See
-                for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this
-              layout would work with some actual real-world content in place.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-                fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div> -->
-
-
-
-        <!-- <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
-                class="text-body-secondary">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really
-              intended to be actually read, simply here to give you a better view of what this would look like with some
-              actual content. Your content.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%"
-                fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider"> -->
+        >
 
         <!-- /END THE FEATURETTES -->
 
-      </div><!-- /.container -->
+      </div>
 
   </main>
   <script src="bootstrap.bundle.min.js"></script>
 </body>
-<footer class="bg-light mt-6">
-        <div class="grid  grid-cols-4">
-          <div class=" flex flex-col justify-center items-center">
-            <img src="../../images/2.png" class="w-[100px]" alt="">
-            <p class="font-semibold -mt-6">BD WEDDING BRIDGE</p>
-          </div>
-          <div class=" text-center flex flex-col justify-center items-center p-4">
-            <h1 class="text-lg text-blue-600 font-bold">Company</h1>
-            <div class="flex flex-col justify-center items-center">
-              <a href="#">About Us</a>   
-              <a>contact us</a>
-              <a>Jobs</a>
-              <a>Press Kit</a>
-              
-            </div>
-          </div>
-          <div class=" text-center flex flex-col justify-start items-center p-4">
-            <h1 class="text-lg text-blue-600 font-bold">Legal</h1>
-            <div class="flex flex-col justify-center items-center">
-           
-              <a>Term of use</a>
-              <a>Refund policy</a>
-              <a>Privacy policy</a>
-            </div>
-          </div>
-          <div class=" flex flex-col justify-center items-center p-1 gap-1">
-            <h1 class="text-lg text-blue-600 font-bold">Social Media</h1>
-            <div class="flex flex-wrap justify-around gap-2">
-              <img src="../../images/fb.png" class="w-[30px]" alt="">
-              <img src="../../images/Instagram_logo.jpeg" class="w-[30px]" alt="">
-              <img src="../../images/LinkedIn_icon.png" class="w-[30px]" alt="">
-              <img src="../../images/yt.png" class="w-[30px]" alt="">
-              <img src="../../images/Telegram_logo.jpeg" class="w-[30px]" alt="">
-            </div>
-          </div>
-        </div>
-        <div class=" text-center py-2 ">
-          <small class="text-gray-400">&copy; 2024 BD Wedding Bridge Team, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></small>
-        </div>
-      </footer>
+
+<footer class="bg-light ">
+  <div class="grid  grid-cols-4">
+    <div class=" flex flex-col justify-center items-center">
+      <img src="../../images/2.png" class="w-[100px]" alt="">
+      <p class="font-semibold -mt-6">BD WEDDING BRIDGE</p>
+    </div>
+    <div class=" text-center flex flex-col justify-center items-center p-4">
+      <h1 class="text-lg text-blue-600 font-bold">Company</h1>
+      <div class="flex flex-col justify-center items-center">
+        <a href="#">About Us</a>
+        <a>contact us</a>
+        <a>Jobs</a>
+        <a>Press Kit</a>
+
+      </div>
+    </div>
+    <div class=" text-center flex flex-col justify-start items-center p-4">
+      <h1 class="text-lg text-blue-600 font-bold">Legal</h1>
+      <div class="flex flex-col justify-center items-center">
+
+        <a>Term of use</a>
+        <a>Refund policy</a>
+        <a>Privacy policy</a>
+      </div>
+    </div>
+    <div class=" flex flex-col justify-center items-center p-1 gap-1">
+      <h1 class="text-lg text-blue-600 font-bold">Social Media</h1>
+      <div class="flex flex-wrap justify-around gap-2">
+        <img src="../../images/fb.png" class="w-[30px]" alt="">
+        <img src="../../images/Instagram_logo.jpeg" class="w-[30px]" alt="">
+        <img src="../../images/LinkedIn_icon.png" class="w-[30px]" alt="">
+        <img src="../../images/yt.png" class="w-[30px]" alt="">
+        <img src="../../images/Telegram_logo.jpeg" class="w-[30px]" alt="">
+      </div>
+    </div>
+  </div>
+  <div class=" text-center py-2 ">
+    <small class="text-gray-400">&copy; 2024 BD Wedding Bridge Team, Inc. &middot; <a href="#">Privacy</a> &middot; <a
+        href="#">Terms</a></small>
+  </div>
+</footer>
 
 </html>
