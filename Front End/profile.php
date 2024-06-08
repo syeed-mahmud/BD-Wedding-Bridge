@@ -55,10 +55,10 @@ include("../Back End/header.php")
        <div class="sidebar bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
             <img src="../images/syeed.jpg" alt="Profile Picture" class="profile-pic">
             <h1> <?php echo htmlspecialchars($name); ?></h1>
-            <button class="btn  flex justify-center items-center gap-1">
+            <!-- <button class="btn  flex justify-center items-center gap-1">
                 <img class=" w-10" src="../images/settingslogo.png" alt="">
                 <p class="btn text-lg hover:text-xl">Settings</p>
-            </button>
+            </button> -->
         </div>
         <div class="main-content bg-pink-50">
             <div class="profile-header flex justify-center items-center">
