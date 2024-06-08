@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<footer class="bg-light mt-6">
+<footer class="bg-light ">
         <div class="grid  grid-cols-4">
           <div class=" flex flex-col justify-center items-center">
             <img src="../images/2.png" class="w-[100px]" alt="">

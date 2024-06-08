@@ -47,20 +47,23 @@ $query->close();
 </head>
 
 <body class="">
-<?php
-include("../Back End/header.php")
-?>
+    <?php
+    include ("../Back End/header.php")
+        ?>
 
-    <div class="container ">
-       <div class="sidebar bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
+    <div class="grid grid-cols-5 ">
+        <div
+            class="flex flex-col justify-start pt-10 items-center bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
             <img src="../images/syeed.jpg" alt="Profile Picture" class="profile-pic">
-            <h1> <?php echo htmlspecialchars($name); ?></h1>
+            <div>
+                <h1 class="text-2xl"> <?php echo htmlspecialchars($name); ?></h1>
+            </div>
             <!-- <button class="btn  flex justify-center items-center gap-1">
                 <img class=" w-10" src="../images/settingslogo.png" alt="">
                 <p class="btn text-lg hover:text-xl">Settings</p>
             </button> -->
         </div>
-        <div class="main-content bg-pink-50">
+        <div class="col-span-4 pb-10 bg-pink-50">
             <div class="profile-header flex justify-center items-center">
                 <h2 class="label fs-1 border-b-4 border-dashed fw-5">Personal Profile</h2>
 
@@ -79,21 +82,21 @@ include("../Back End/header.php")
                         <span class=" info-item  fs-4">Phone Number</span>
                         <div class=" flex gap-2">
                             <span class="value"><?php echo htmlspecialchars($phone); ?></span>
-                            
+
                         </div>
                     </div>
                     <div class="info-item flex flex-col justify-center items-start">
                         <span class=" info-item  fs-4">Address</span>
                         <div class=" flex gap-2">
                             <span class="value"><?php echo htmlspecialchars($address); ?></span>
-                            
+
                         </div>
                     </div>
                     <div class="info-item flex flex-col justify-center items-start">
                         <span class=" fs-4">Email</span>
                         <div>
                             <span class="value"><?php echo htmlspecialchars($email); ?></span>
-                            
+
                         </div>
                     </div>
 
@@ -117,6 +120,53 @@ include("../Back End/header.php")
                 </div>
             </div>
 
+            <hr class=" border-2 my-20">
+
+            <!-- Registered weddings -->
+
+            <div class="profile-header flex justify-center mt-20 mb-10 items-center">
+                <h2 class="label fs-1 border-b-4 border-dashed fw-5">Registered Wedding</h2>
+            </div>
+
+            <div class="grid grid-cols-4 gap-4 px-10">
+                <div class="card">
+                    <img src="../images/10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body flex flex-col justify-center items-center">
+                        <h5 class="card-title pb-0 mb-0">Wedding</h5>
+                        <p class="card-text my-0">Name Of The Location</p>
+                        <p>Date : 23 Feb, 2024</p>
+                        <a href="#" class="btn btn-primary">Cancel</a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <hr class=" border-2 my-20">
+
+            <!-- Hosted Wedding -->
+
+            <div class="profile-header flex justify-center mt-20 mb-10 items-center">
+                <h2 class="label fs-1 border-b-4 border-dashed fw-5">Hosted Wedding</h2>
+            </div>
+
+            <div class="grid grid-cols-4 gap-4 px-10">
+                <div class="card">
+                    <img src="../images/10.jpg" class="card-img-top" alt="...">
+                    <div class="card-body flex flex-col justify-center items-center">
+                        <h5 class="card-title pb-0 mb-0">Wedding</h5>
+                        <p class="card-text my-0">Name Of The Location</p>
+                        <p>Date : 23 Feb, 2024</p>
+                        
+                        <a href="#" class="btn btn-primary">Cancel</a>
+                        
+                      
+                    </div>
+                </div>
+              
+            </div>
+
+
+
 
         </div>
     </div>
@@ -124,10 +174,10 @@ include("../Back End/header.php")
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
-        <?php
-      include("../Back End/footer.php")
-      ?>
+    
+    <?php
+    include ("../Back End/footer.php")
+        ?>
 </body>
 
 </html>
