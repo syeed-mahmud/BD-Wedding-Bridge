@@ -11,7 +11,8 @@
   <meta name="generator" content="Hugo 0.122.0">
   <title>Carousel Template · Bootstrap v5.3</title>
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <script src="../../style.css"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
