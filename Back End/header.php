@@ -18,15 +18,16 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Host Wedding</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Setting
-          </a>
-          <ul class="dropdown-menu dropdown-end">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="../Back End/logout.php">Log out</a></li>
+        <li class="nav-item">
+        <div class="dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn m-1">Setting</div>
+             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+               <li><a href="#">Profile</a></li>
+               <li><a  href="../Back End/logout.php">Log In</a></li>
+               <li><a  href="../Back End/logout.php">Admin Log In</a></li>
+               <li><a  href="../Back End/logout.php">Log out</a></li>
           </ul>
+          </div>
         </li>
       </ul>    
     </div>

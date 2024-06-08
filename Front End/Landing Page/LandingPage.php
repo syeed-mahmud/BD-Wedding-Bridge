@@ -110,7 +110,7 @@
   <link href="carousel.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-[url('../../images/bgimg.png')]">
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
       <path
@@ -131,58 +131,40 @@
     </symbol>
   </svg>
 
-  <div class="dropdown position-fixed bottom-0  end-0 mb-3 me-3 bd-mode-toggle">
-    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
-      <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
-        <use href="#circle-half"></use>
-      </svg>
-      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#sun-fill"></use>
-          </svg>
-          Light
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-          aria-pressed="false">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#moon-stars-fill"></use>
-          </svg>
-          Dark
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-      <li>
-        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
-          aria-pressed="true">
-          <svg class="bi me-2 opacity-50" width="1em" height="1em">
-            <use href="#circle-half"></use>
-          </svg>
-          Auto
-          <svg class="bi ms-auto d-none" width="1em" height="1em">
-            <use href="#check2"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
-  </div>
 
+  <nav class="navbar bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+    <div class=" flex flex-row justify-center items-center">
+          <img src="../../images/Logo.png" alt="Logo" width="50px" height="60px" class="d-inline-block align-text-top">
+          <a class="navbar-brand" href="#"> BD Wedding Bridge</a>
+        </div>
 
-  <?php
-include("../../Back End/header.php")
-?>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">All Weddings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Host Wedding</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Setting
+          </a>
+          <ul class="dropdown-menu dropdown-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="../Back End/logout.php">Log out</a></li>
+          </ul>
+        </li>
+      </ul>    
+    </div>
+  </nav>
 
   <main>
 
@@ -718,44 +700,48 @@ include("../../Back End/header.php")
 
       </div><!-- /.container -->
 
-
-      <!-- FOOTER -->
-      <footer class="border-2 border-dotted bg-pink-50">
-        <div class="grid grid-cols-3 ">
+  </main>
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+<footer class="bg-light mt-6">
+        <div class="grid  grid-cols-4">
           <div class=" flex flex-col justify-center items-center">
             <img src="../../images/2.png" class="w-[100px]" alt="">
             <p class="font-semibold -mt-6">BD WEDDING BRIDGE</p>
           </div>
           <div class=" text-center flex flex-col justify-center items-center p-4">
-            <h1 class="text-lg text-blue-600 font-bold">Useful Links</h1>
+            <h1 class="text-lg text-blue-600 font-bold">Company</h1>
             <div class="flex flex-col justify-center items-center">
               <a href="#">About Us</a>   
               <a>contact us</a>
-              <a>term of use</a>
-              <a>refund policy</a>
-              <a>privacy policy</a>
+              <a>Jobs</a>
+              <a>Press Kit</a>
+              
             </div>
           </div>
-          <div class=" flex flex-col justify-start items-center p-4 gap-4">
+          <div class=" text-center flex flex-col justify-start items-center p-4">
+            <h1 class="text-lg text-blue-600 font-bold">Legal</h1>
+            <div class="flex flex-col justify-center items-center">
+           
+              <a>Term of use</a>
+              <a>Refund policy</a>
+              <a>Privacy policy</a>
+            </div>
+          </div>
+          <div class=" flex flex-col justify-center items-center p-1 gap-1">
             <h1 class="text-lg text-blue-600 font-bold">Social Media</h1>
-            <div class="flex flex-wrap justify-around gap-4">
-              <img src="../../images/fb.png" class="w-[50px]" alt="">
-              <img src="../../images/Instagram_logo.jpeg" class="w-[50px]" alt="">
-              <img src="../../images/LinkedIn_icon.png" class="w-[50px]" alt="">
-              <img src="../../images/yt.png" class="w-[50px]" alt="">
-              <img src="../../images/Telegram_logo.jpeg" class="w-[50px]" alt="">
+            <div class="flex flex-wrap justify-around gap-2">
+              <img src="../../images/fb.png" class="w-[30px]" alt="">
+              <img src="../../images/Instagram_logo.jpeg" class="w-[30px]" alt="">
+              <img src="../../images/LinkedIn_icon.png" class="w-[30px]" alt="">
+              <img src="../../images/yt.png" class="w-[30px]" alt="">
+              <img src="../../images/Telegram_logo.jpeg" class="w-[30px]" alt="">
             </div>
           </div>
         </div>
-        <div class=" text-center py-2 border-t-2 bg-gray-100 border-dotted ">
-          <small class="text-gray-400">&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></small>
+        <div class=" text-center py-2 ">
+          <small class="text-gray-400">&copy; 2024 BD Wedding Bridge Team, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></small>
         </div>
-
       </footer>
-  </main>
-
-  <script src="bootstrap.bundle.min.js"></script>
-
-</body>
 
 </html>

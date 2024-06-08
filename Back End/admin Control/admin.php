@@ -71,8 +71,10 @@ if (isset($_GET['delete'])) {
     <title>Admin</title>
 </head>
 
-
-<body class="bg-[url('../images/bgimg.png')]" style="padding-top: 2px;">
+<?php
+include ("adminheader.php")
+    ?>
+<body class="bg-[url('../../images/bgimg.png')]" style="padding-top: 2px;">
 
     <div class="container flex-col  pl-12 pt-5">
         <div class=" flex flex-col gap-10">
@@ -175,9 +177,6 @@ if (isset($_GET['delete'])) {
         </div>
     </div>
 
-
-
-
     <div class="cards-container flex gap-3 m-10">
         <?php
         $select_news = $pdo->prepare("SELECT * FROM news");
@@ -206,7 +205,7 @@ if (isset($_GET['delete'])) {
 </body>
 
 <?php
-include ("footer.php")
+include ("adminfooter.php")
     ?>
 
 </html>
