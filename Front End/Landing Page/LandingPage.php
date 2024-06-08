@@ -419,7 +419,7 @@
 
           <div class="row row-cols-1 mx-auto row-cols-md-3 g-4 " style="width: 70%;">
             <div class="col">
-              <div class="card h-100 border-2 border-[#21C1BC] shadow-lg">
+              <div class="card h-75 border-2 border-[#21C1BC] shadow-lg">
                 <img src="../../images/2.jpg" class="card-img-top h-100 object-cover" alt="...">
                 <div class="card-body bg-[#EBD7D7]">
                   <h5 class="card-title text-xl">Fahim & Israt’s
