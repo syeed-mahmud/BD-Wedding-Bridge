@@ -77,7 +77,7 @@ if (isset($_POST['confirm'])) {
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body class="w-screen bg-[url('../../images/bgimg.png')] py-20">
+<body class="w-screen bg-[url('../images/bgimg.png')] py-20">
     <section>
 
         <div class=" w-1/4 mx-auto my-10">
