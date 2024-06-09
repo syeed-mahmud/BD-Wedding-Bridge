@@ -21,8 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = htmlspecialchars($_POST['password']);
     $confirm_password = htmlspecialchars($_POST['confirm_password']);
 
+    $target_dir = "../Profile Images/";
+$target_file = $target_dir . basename($_FILES["Profilepic"]["name"]);
+if (move_uploaded_file($_FILES["Profilepic"]["tmp_name"], $target_file)) {
+    // File uploaded successfully
+} else {
+    echo "Sorry, there was an error uploading your file.";
+}
+
     // Validate input
-    if (empty($name) || empty($email) || empty($phone) || empty($password) || empty($confirm_password)) {
+    if (empty($name) || empty($email) || empty($phone) || empty($password) || empty($confirm_password) || empty($target_file)) {
         echo "All fields are required.";
     } elseif ($password !== $confirm_password) {
         echo "Passwords do not match.";
@@ -31,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert into database
-        $sql = "INSERT INTO users (name, email, phone, address, password) VALUES ('$name', '$email', '$phone', '$address', '$hashed_password')";
+        $sql = "INSERT INTO users (name, email, phone, address, password, profile_img) VALUES ('$name', '$email', '$phone', '$address', '$hashed_password', '$target_file')";
 
         if ($conn->query($sql) === TRUE) {
             echo "<script>alert('Registration Successful.'); window.location.href = '../Front End/login.html';</script>";
@@ -40,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+
 
 $conn->close();
 ?>

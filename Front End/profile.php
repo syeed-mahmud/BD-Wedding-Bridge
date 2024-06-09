@@ -21,10 +21,10 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 
-$query = $conn->prepare("SELECT name, email, phone, address FROM users WHERE id = ?");
+$query = $conn->prepare("SELECT name, email, phone, address, profile_img FROM users WHERE id = ?");
 $query->bind_param("i", $user_id);
 $query->execute();
-$query->bind_result($name, $email, $phone, $address);
+$query->bind_result($name, $email, $phone, $address, $Profile_img);
 $query->fetch();
 $query->close();
 ?>
@@ -54,7 +54,7 @@ $query->close();
     <div class="grid grid-cols-5 ">
         <div
             class="flex flex-col justify-start pt-10 items-center bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
-            <img src="../images/syeed.jpg" alt="Profile Picture" class="profile-pic">
+            <img src="<?php echo htmlspecialchars($Profile_img); ?>" alt="Profile Picture" class="profile-pic">
             <div>
                 <h1 class="text-2xl"> <?php echo htmlspecialchars($name); ?></h1>
             </div>
