@@ -22,7 +22,7 @@ $selected_wedid = $_SESSION['selected_wedid'];
 
 $query = $conn->prepare("SELECT 
     bg.WedReg_id, bg.G_first_name, bg.G_last_name, bg.G_email, bg.G_contact, bg.B_first_name, bg.B_last_name, bg.B_email, bg.B_contact, bg.wedding_image, 
-    b.Entry_Price, b.Bank_name, b.Bank_Acc_Name, b.Bank_Acc_no, b.Branch, b.Routing_no,
+    b.Entry_Price,
     w.event_location, w.event_start_date, w.event_end_date, w.event_program_list, w.Food, w.Accommodation
 FROM `bride-groom` AS bg 
 JOIN bank AS b ON bg.WedReg_id = b.WedReg_id 
@@ -32,7 +32,7 @@ $query->bind_param("s", $selected_wedid);
 $query->execute();
 $query->bind_result(
     $bg_WedReg_id, $G_first_name, $G_last_name, $G_email, $G_contact, $B_first_name, $B_last_name, $B_email, $B_contact, $wedding_image, 
-    $Entry_Price, $Bank_name, $Bank_Acc_Name, $Bank_Acc_no, $Branch, $Routing_no,
+    $Entry_Price,
     $event_location, $event_start_date, $event_end_date, $event_program_list, $Food, $Accommodation
 );
 
@@ -60,7 +60,7 @@ $query->close();
   <body class="w-screen bg-[url('../images/bgimg.png')] py-20">
     <section>
       <div class="w-1/4 mx-auto my-10">
-        <img src="<?php echo htmlspecialchars($wedding_image) ?>" alt="Wedding Venue" class="rounded-3xl shadow-lg h-full w-full" />
+        <img src="<?php echo htmlspecialchars($wedding_image) ?>" alt="Wedding Photo" class="rounded-3xl shadow-lg h-full w-full" />
       </div>
 
       <div class="p-6">
@@ -156,31 +156,6 @@ $query->close();
           </li>
         </ul>
       </div>
-    </section>
-    <div class="flex items-center my-5 justify-center">
-      <div class="w-4 h-4 bg-black rounded-full"></div>
-      <div class="min-w-[800px] border-t-4 border-black"></div>
-      <div class="w-4 h-4 bg-black rounded-full"></div>
-    </div>
-    <!-- payment option section -->
-    <section>
-      <div class="mr-20 text-right my-20 border-2 w-fit rounded-3xl p-5 bg-[#21C1BC66] ml-auto">
-        <h1 class="text-6xl underline decoration-double font-light text-black">
-          Payment Option
-        </h1>
-        <p class="text-3xl font-semibold mt-9 ml-10">
-          Bank Name : <span class="text-gray-700"><?php echo htmlspecialchars($Bank_name) ?></span>
-          <br />Acc Name :
-          <span class="text-gray-700"><?php echo htmlspecialchars($Bank_Acc_Name) ?></span> <br />
-          Bank Acc : <span class="text-gray-700"> <?php echo htmlspecialchars($Bank_Acc_no) ?></span>
-
-          <br />
-          Branch Name : <span class="text-gray-700"><?php echo htmlspecialchars($Branch) ?></span>
-
-          <br />Routing No : <span class="text-gray-700"><?php echo htmlspecialchars($Routing_no) ?> </span>
-        </p>
-      </div>
-
       <button id="registerButton"class="btn btn-info w-80 py-2 text-3xl rounded-2xl ml-20 font-semibold bg-[#000000C9] text-white">
         Register
       </button>

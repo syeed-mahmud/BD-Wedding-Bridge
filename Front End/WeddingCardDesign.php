@@ -11,13 +11,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-?>
-<?php
-if (!isset($_SESSION['username'] )) {
-    header("Location: ../Back End/login.php");
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
