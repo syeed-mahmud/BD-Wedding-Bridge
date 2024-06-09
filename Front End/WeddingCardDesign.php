@@ -27,15 +27,14 @@ FROM `bride-groom` AS bg
 JOIN weddingevent AS w ON bg.WedReg_id = w.WedReg_id 
 JOIN regesterd_wedding AS r ON bg.WedReg_id = r.Wed_id 
 JOIN users AS u ON u.id = r.user_id
-WHERE bg.WedReg_id = ?");
-$query->bind_param("s", $selected_wedid);
+WHERE bg.WedReg_id = ? AND r.user_id = ?");
+$query->bind_param("si", $selected_wedid, $user_id);
 $query->execute();
 $query->bind_result(
-    $G_first_name,$B_first_name, $event_location, $event_start_date,$name
-);
-
+    $G_first_name,$B_first_name, $event_location, $event_start_date,$name);
 $query->fetch();
 $query->close();
+
 ?>
 
 <!DOCTYPE html>

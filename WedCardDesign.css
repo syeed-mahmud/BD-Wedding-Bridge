@@ -68,7 +68,7 @@ a {
 .a .text-wrapper {
   position: absolute;
   top: 135px;
-  left: 150px;
+  left: 50%;
   font-family: "Poppins", Helvetica;
   font-weight: 500;
   color: #000000;
