@@ -181,9 +181,15 @@ $query->close();
         </p>
       </div>
 
-      <button class="btn btn-info w-80 py-2 text-3xl rounded-2xl ml-20 font-semibold bg-[#000000C9] text-white">
+      <button id="registerButton"class="btn btn-info w-80 py-2 text-3xl rounded-2xl ml-20 font-semibold bg-[#000000C9] text-white">
         Register
       </button>
     </section>
   </body>
 </html>
+
+<script>
+document.getElementById('registerButton').addEventListener('click', function() {
+    window.location.href = `../Back End/booking.php`;
+});
+</script>
