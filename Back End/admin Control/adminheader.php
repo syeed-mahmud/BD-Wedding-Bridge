@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
 <div class="navbar bg-[#21C1BC] mb-6">
   <div class="flex-1">
     <a class="btn btn-ghost text-xl">Admin Control</a>
@@ -14,3 +24,9 @@
 </div>
   </div>
 </div>
+  
+</body>
+</html>
+
+
+

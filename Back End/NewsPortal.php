@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News Layout</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.30.0/dist/full.css" rel="stylesheet">
   <style>
@@ -12,15 +11,20 @@
       height: 500px;
       width: 100%;
       object-fit: cover;
-    
+      border-radius: 20px 20px;
     }
     .news-content {
-     
-      
+      background-color: #36C2A8;
+      border-radius: 20px 0 0 20px;
       padding: 20px;
       color: black;
     }
-
+    .news-content2 {
+      background-color: #36C2A8;
+      border-radius: 0 20px 20px 0;
+      padding: 20px;
+      color: black;
+    }
     .news-row {
       display: flex;
       align-items: stretch;
@@ -31,15 +35,12 @@
     }
   </style>
 </head>
-
 <?php
 include("header.php")
 ?>
+<body>
 
-
-<body class="bg-[#EBD7D7]">
-
-<div class="container mt-5 " id="news-container">
+<div class="container mt-5" id="news-container">
   <?php
     // Database connection
     $servername = "localhost";
@@ -56,42 +57,39 @@ include("header.php")
     $sql = "SELECT * FROM news";
     $result = $conn->query($sql);
 
-
-
     if ($result->num_rows > 0) {
         $i = 0;
         while($row = $result->fetch_assoc()) {
-            $contentClass = ($i % 2 === 0) ? 'news-content' : 'news-content';
+            $contentClass = ($i % 2 === 0) ? 'news-content' : 'news-content2';
             echo '<div class="row news-row mb-4">';
             
             if ($i % 2 === 0) {
                 echo '<div class="col-md-6 news-item">
                         <div class="' . $contentClass . ' d-flex flex-column justify-content-between mt-5" style="height: 410px;">
                             <div>
-                                <h2 class="text-4xl font-bold">' . $row["news_title"] . '</h2>
-                                
-                                <a href="' . $row["news_link"] . '" class="text-xl text-blue-700 font-semibold mb-5">View Source</a>
-                                <p class="mt-5">' . $row["news_content"] . '</p>
+                                <h2 class="text-2xl font-bold">' . $row["news_title"] . '</h2>
+                                <h2 class="text-2xl font-bold mb-5">' . $row["news_link"] . '</h2>
+                                <p>' . $row["news_content"] . '</p>
                             </div>
                         </div>
                       </div>
                       <div class="col-md-6 news-item">
                         <div class="news-card">
-                          <img class=" rounded-r-[50px]" src="' . $row["news_img"] . '" alt="' . $row["news_title"] . ' image">
+                          <img src="' . $row["news_img"] . '" alt="' . $row["news_title"] . ' image">
                         </div>
                       </div>';
             } else {
                 echo '<div class="col-md-6 news-item">
                         <div class="news-card">
-                          <img class=" rounded-l-[50px]" src="' . $row["news_img"] . '" alt="' . $row["news_title"] . ' image">
+                          <img src="' . $row["news_img"] . '" alt="' . $row["news_title"] . ' image">
                         </div>
                       </div>
                       <div class="col-md-6 news-item">
                         <div class="' . $contentClass . ' d-flex flex-column justify-content-between mt-5" style="height: 410px;">
-                            <div class="">
+                            <div>
                                 <h2 class="text-2xl font-bold">' . $row["news_title"] . '</h2>
-                                <a href="' . $row["news_link"] . '" class="text-xl text-blue-700 font-semibold mb-5">View Source</a>
-                                <p class="mt-5">' . $row["news_content"] . '</p>
+                                <h2 class="text-2xl font-bold mb-5">' . $row["news_link"] . '</h2>
+                                <p>' . $row["news_content"] . '</p>
                             </div>
                         </div>
                       </div>';
@@ -110,9 +108,7 @@ include("header.php")
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 <?php
 include("footer.php")
 ?>
-
 </html>
