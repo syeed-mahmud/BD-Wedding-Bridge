@@ -44,7 +44,7 @@ if (isset($_GET['view'])) {
 <body class="sidepage">
 
 <?php
-include("../Back End/header.php");
+include("header.php");
 ?>
 <div class="container grid grid-cols-4 gap-4">
 <?php
@@ -83,7 +83,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 </div>
 <?php
-include("../Back End/footer.php");
+include("footer.php");
 ?>
 
 </body>

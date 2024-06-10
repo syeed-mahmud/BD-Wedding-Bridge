@@ -17,7 +17,7 @@
 </head>
 <body class="FormPage">
   <?php
-  include("../Back End/header.php")
+  include("header.php")
   ?>
 
       <!-- Form Create -->
@@ -178,7 +178,7 @@
        </section>
       </div>
       <?php
-      include("../Back End/footer.php")
+      include("footer.php")
       ?>
 </body>
 </html>

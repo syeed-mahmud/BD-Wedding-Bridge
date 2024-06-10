@@ -27,6 +27,21 @@ $query->execute();
 $query->bind_result($name, $email, $phone, $address, $Profile_img);
 $query->fetch();
 $query->close();
+
+
+if (isset($_GET['delete'])) {
+    $delete_id = $_GET['delete'];
+
+    // Prepare and execute delete statements with error checking
+    $stmt = $conn->prepare("DELETE FROM `regesterd_wedding` WHERE `Wed_id` = ? and user_id = ?");
+    $stmt->bind_param("si", $delete_id, $user_id);
+    if (!$stmt->execute()) {
+        echo "Error deleting from `regesterd_wedding`: " . $stmt->error;
+    }
+
+    header('location: profile.php');
+    exit();
+}
 ?>
 
 
@@ -43,14 +58,13 @@ $query->close();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../profile.css">
-    <link rel="stylesheet" href="../Back End/login.php">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class="">
-    <?php
-    include ("../Back End/header.php")
+<?php
+    include ("header.php")
         ?>
-
+<body class="">
     <div class="grid grid-cols-5 ">
         <div
             class="flex flex-col justify-start pt-10 items-center bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
@@ -129,23 +143,55 @@ $query->close();
             </div>
 
             <div class="grid grid-cols-4 gap-4 px-10">
-                <div class="card">
-                    <img src="../images/10.jpg" class="card-img-top" alt="...">
-                    <div class="card-body flex flex-col justify-center items-center">
-                        <h5 class="card-title pb-0 mb-0">Wedding</h5>
-                        <p class="card-text my-0">Name Of The Location</p>
-                        <p>Date : 23 Feb, 2024</p>
-                        <a href="#" class="btn btn-primary">Cancel</a>
-                    </div>
+            <?php
+// Query to retrieve all weddings registered
+$sql = "SELECT `bride-groom`.WedReg_Id, G_first_name, B_first_name, event_start_date, event_end_date, event_location, wedding_image 
+FROM `bride-groom` 
+JOIN weddingevent ON `bride-groom`.WedReg_Id = weddingevent.WedReg_Id
+JOIN regesterd_wedding ON `bride-groom`.WedReg_Id = regesterd_wedding.Wed_id
+JOIN users ON users.id = regesterd_wedding.user_id
+WHERE users.id = ?";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $WedReg_Id = $row["WedReg_Id"];
+        $BrideName = $row["B_first_name"];
+        $GroomName = $row["G_first_name"];
+        $StartDate = $row["event_start_date"];
+        $EndDate = $row["event_end_date"];
+        $Location = $row["event_location"];
+        $Image = $row["wedding_image"];
+
+        // Create a new card for each wedding
+        echo '
+            <div class="card">
+                <img src="'. $Image . '" class="card-img-top" style=" height: 150px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">' . $BrideName . ' & ' . $GroomName . '  Wedding</h5>
+                    <p class="card-text text-wrapper">Date: ' . $StartDate . ' to ' . $EndDate . '</p>
+                    <p class="card-text text-wrapper">Location: ' . $Location . '</p>
+                    <a href="profile.php?delete=' . $WedReg_Id . '" class="btn btn-primary">Delete</a>
                 </div>
+            </div>
+        ';
+    }
+} else {
+    echo "No weddings found.";
+}
+?>
             
             </div>
 
-            <hr class=" border-2 my-20">
+            <!-- <hr class=" border-2 my-20"> -->
 
             <!-- Hosted Wedding -->
 
-            <div class="profile-header flex justify-center mt-20 mb-10 items-center">
+            <!-- <div class="profile-header flex justify-center mt-20 mb-10 items-center">
                 <h2 class="label fs-1 border-b-4 border-dashed fw-5">Hosted Wedding</h2>
             </div>
 
@@ -163,7 +209,7 @@ $query->close();
                     </div>
                 </div>
               
-            </div>
+            </div> -->
 
 
 
@@ -176,8 +222,7 @@ $query->close();
         crossorigin="anonymous"></script>
     
     <?php
-    include ("../Back End/footer.php")
-        ?>
+    include ("footer.php") ?>
 </body>
 
 </html>

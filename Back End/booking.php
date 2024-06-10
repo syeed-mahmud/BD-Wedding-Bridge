@@ -75,8 +75,12 @@ if (isset($_POST['confirm'])) {
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-
+<?php
+include("header.php");
+?>
 <body class="w-screen bg-[url('../images/bgimg.png')] py-20">
     <section>
 
@@ -172,7 +176,7 @@ if (isset($_POST['confirm'])) {
             Your Information</h1>
 
         <div class="flex justify-center items-center mt-10 gap-5">
-            <img class="w-40 h-40 border-4 border-blue-600 rounded-full" src="<?php echo htmlspecialchars($Profile_img); ?>" alt="">
+            <img class="w-40 h-40 border-4 border-blue-600 rounded-full" src="<?php echo htmlspecialchars($Profile_img); ?>" alt="Profile Picture" onerror="this.onerror=null;this.src='../images/unknown.jpg';">
 
             <div class="">
 
@@ -202,5 +206,7 @@ if (isset($_POST['confirm'])) {
         </div>
     </form>
 </body>
-
+<?php
+include("footer.php");
+?>
 </html>

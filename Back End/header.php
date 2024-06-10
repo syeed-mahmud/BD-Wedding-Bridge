@@ -1,5 +1,4 @@
 
-
 <nav class="navbar bg-body-tertiary sticky-top">
     <div class="container-fluid">
     <div class=" flex flex-row justify-center items-center">
@@ -23,11 +22,11 @@
         <li class="nav-item">
         <div class="dropdown dropdown-end">
           <div tabindex="0" role="button" class="btn m-1">Setting</div>
-             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 ">
-               <li><a class="btn" href="#">Profile</a></li>
-               <li><a class="btn" href="../Back End/logout.php">Log In</a></li>
-               <li><a class="btn" href="../Back End/logout.php">Admin Log In</a></li>
-               <li><a class="btn" href="../Back End/logout.php">Log out</a></li>
+             <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+               <li><a href="#">Profile</a></li>
+               <li><a  href="login.html">Log In</a></li>
+               <li><a  href="adminlogin.html">Admin Log In</a></li>
+               <li><a  href="../Back End/logout.php">Log out</a></li>
           </ul>
           </div>
         </li>

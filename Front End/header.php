@@ -1,8 +1,3 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
-
 
 <nav class="navbar bg-body-tertiary sticky-top">
     <div class="container-fluid">

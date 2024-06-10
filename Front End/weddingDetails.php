@@ -56,8 +56,13 @@ $query->close();
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+  </head><?php
+      include("header.php")
+      ?>
   <body class="w-screen bg-[url('../images/bgimg.png')] py-20">
+  
     <section>
       <div class="w-1/4 mx-auto my-10">
         <img src="<?php echo htmlspecialchars($wedding_image) ?>" alt="Wedding Photo" class="rounded-3xl shadow-lg h-full w-full" />
@@ -160,7 +165,11 @@ $query->close();
         Register
       </button>
     </section>
+    
   </body>
+  <?php
+      include("footer.php")
+      ?>
 </html>
 
 <script>
