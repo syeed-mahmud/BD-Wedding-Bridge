@@ -68,7 +68,7 @@ if (isset($_GET['delete'])) {
     <div class="grid grid-cols-5 ">
         <div
             class="flex flex-col justify-start pt-10 items-center bg-gradient-to-r from-green-100 to-blue-100 hover:from-pink-100 hover:to-yellow-100">
-            <img src="<?php echo htmlspecialchars($Profile_img); ?>" alt="Profile Picture" class="profile-pic">
+            <img src="<?php echo htmlspecialchars($Profile_img); ?>" alt="Profile Picture" onerror="this.onerror=null;this.src='../images/unknown.jpg';" class="profile-pic">
             <div>
                 <h1 class="text-2xl"> <?php echo htmlspecialchars($name); ?></h1>
             </div>

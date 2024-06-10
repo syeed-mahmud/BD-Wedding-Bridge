@@ -144,10 +144,10 @@
             <label for="bank_name" class="form-label">Bank Name</label>
             <select class="form-select" aria-label="bank_name" id="bank_name" name="bank_name" required>
               <option selected>Select Bank</option>
-              <option value="1">Standard Chartered</option>
-              <option value="2">Eastern Bank PLC</option>
-              <option value="3">Bank Asia PLC</option>
-              <option value="4">Brac Bank</option>
+              <option value="Standard Chartered">Standard Chartered</option>
+              <option value="Eastern Bank PLC">Eastern Bank PLC</option>
+              <option value="Bank Asia PLC">Bank Asia PLC</option>
+              <option value="Brac Bank">Brac Bank</option>
             </select>
           </div>
 
