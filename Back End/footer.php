@@ -20,10 +20,10 @@
           <div class=" text-center flex flex-col justify-center items-center p-4">
             <h1 class="text-lg text-blue-600 font-bold">Company</h1>
             <div class="flex flex-col justify-center items-center">
-              <a href="#">About Us</a>   
+              <a href="../Front End/aboutus.php">About Us</a>   
               <a>contact us</a>
               <a>Jobs</a>
-              <a>Press Kit</a>
+              <a href="NewsPortal.php">Press Kit</a>
               
             </div>
           </div>
