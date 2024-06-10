@@ -137,21 +137,21 @@
     <div class="container-fluid">
       <div class=" flex flex-row justify-center items-center">
         <img src="../../images/Logo.png" alt="Logo" width="50px" height="60px" class="d-inline-block align-text-top">
-        <a class="navbar-brand" href="#"> BD Wedding Bridge</a>
+        <a class="navbar-brand" href="LandingPage.php"> BD Wedding Bridge</a>
       </div>
 
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="../aboutus.php">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">News</a>
+          <a class="nav-link " href="../../Back End/NewsPortal.php">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">All Weddings</a>
+          <a class="nav-link" href="../wedding.php">All Weddings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Host Wedding</a>
+          <a class="nav-link" href="../WeddingReg.php">Host Wedding</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -162,7 +162,9 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="../Back End/logout.php">Log out</a></li>
+            <li><a class="dropdown-item" href="../login.html">Log In</a></li>
+            <li><a class="dropdown-item" href="../adminlogin.html">Admin Log In</a></li>
+            <li><a class="dropdown-item" href="../../Back End/logout.php">Log out</a></li>
           </ul>
         </li>
       </ul>
@@ -605,9 +607,8 @@
 
   </main>
   <script src="bootstrap.bundle.min.js"></script>
-</body>
 
-<footer class="bg-light ">
+  <footer class="bg-light ">
   <div class="grid  grid-cols-4">
     <div class=" flex flex-col justify-center items-center">
       <img src="../../images/2.png" class="w-[100px]" alt="">
@@ -648,5 +649,6 @@
         href="#">Terms</a></small>
   </div>
 </footer>
+</body>
 
 </html>
