@@ -111,7 +111,7 @@
   <link href="carousel.css" rel="stylesheet">
 </head>
 
-<body class="bg-[url('../../images/bgimg.png')]">
+<body class=" bg-[url('../../images/bgimg.png')]">
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
       <path
@@ -162,8 +162,8 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="../login.html">Log In</a></li>
-            <li><a class="dropdown-item" href="../adminlogin.html">Admin Log In</a></li>
+            <li><a class="dropdown-item" href="../login.php">Log In</a></li>
+            <li><a class="dropdown-item" href="../adminlogin.php">Admin Log In</a></li>
             <li><a class="dropdown-item" href="../../Back End/logout.php">Log out</a></li>
           </ul>
         </li>
@@ -171,7 +171,7 @@
     </div>
   </nav>
 
-  <main>
+  <main class="">
 
     <!-- Banner Section -->
     <div id="myCarousel" class="carousel  mx-auto slide mb-6" data-bs-ride="carousel">
@@ -230,9 +230,6 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-
-
 
     <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -599,16 +596,16 @@
               </div>
             </div>
         </section>
-        >
+    
 
         <!-- /END THE FEATURETTES -->
 
       </div>
 
   </main>
-  <script src="bootstrap.bundle.min.js"></script>
+  
 
-  <footer class="bg-light ">
+  <footer class="bg-light mt-4">
   <div class="grid  grid-cols-4">
     <div class=" flex flex-col justify-center items-center">
       <img src="../../images/2.png" class="w-[100px]" alt="">
@@ -649,6 +646,8 @@
         href="#">Terms</a></small>
   </div>
 </footer>
+
+<script src="bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

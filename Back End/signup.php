@@ -42,7 +42,7 @@ if (move_uploaded_file($_FILES["Profilepic"]["tmp_name"], $target_file)) {
         $sql = "INSERT INTO users (name, email, phone, address, password, profile_img) VALUES ('$name', '$email', '$phone', '$address', '$hashed_password', '$target_file')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "<script>alert('Registration Successful.'); window.location.href = '../Front End/login.html';</script>";
+            echo "<script>alert('Registration Successful.'); window.location.href = '../Front End/login.php';</script>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 if (!isset($_SESSION['user_id']) && ($_SESSION['selected_wedid'])) {
-    header("Location: ../Front End/login.html");
+    header("Location: ../Front End/login.php");
     exit();
 }
 
@@ -81,7 +81,7 @@ if (isset($_POST['confirm'])) {
 <?php
 include("header.php");
 ?>
-<body class="w-screen bg-[url('../images/bgimg.png')] py-20">
+<body class="w-screen bg-[url('../images/bgimg.png')]">
     <section>
 
         <div class=" w-1/4 mx-auto my-10">

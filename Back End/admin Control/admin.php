@@ -69,6 +69,7 @@ if (isset($_GET['delete'])) {
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Admin</title>
+
 </head>
 
 <?php
@@ -185,13 +186,13 @@ include ("adminheader.php")
         ?>
         <?php if (count($result) > 0): ?>
             <?php foreach ($result as $row): ?>
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure>
-                        <img src="<?= $row['news_img'] ?>" class="card-img-top" alt="<?= $row['news_title'] ?>">
+                <div class="card w-96 h-[600px] bg-base-100 shadow-xl">
+                    <figure class="h-1/2">
+                        <img src="<?= $row['news_img'] ?>" class="card-img-top object-cover w-full h-full" alt="<?= $row['news_title'] ?>">
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body w-full h-1/2">
                         <h2 class="card-title"><?= $row['news_title'] ?></h2>
-                        <p><?= $row['news_content'] ?></p>
+                        <p class=" overflow-y-scroll"><?= $row['news_content'] ?></p>
                         <div class="card-actions flex items-center justify-between">
                             <p class="text-2xl"><strong><?= $row['news_id'] ?></strong></p>
                             <a href="admin.php?delete=<?= $row['news_id']; ?>" class="btn btn-error">delete</a>

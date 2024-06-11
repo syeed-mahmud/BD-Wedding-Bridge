@@ -36,7 +36,7 @@
    <!-- Address Section -->
 
    <section class="">
-      <div class=" w-4/5 flex  mx-auto max-h-[80vh] mt-12 p-10 rounded-lg shadow-xl ">
+      <div class=" w-4/5 flex border-2 mx-auto max-h-[80vh] mt-12 p-10 rounded-lg shadow-2xl ">
 
          <div class=" w-3/4">
             <img src="../images/2.png" class="w-[120px] " alt="">
@@ -83,7 +83,7 @@
             <div class="text-[#444242]">
                <p class="text-lg font-bold">ID# : 2211486042</p>
                <p class="text-lg font-bold">Email : Syeed.mahmud@northsouth.edu</p>
-               <p class="text-lg font-bold ">Contact : +8801608239216</p>
+               <p class="text-lg font-bold ">Contact : +8801697479909</p>
             </div>
 
 
@@ -105,7 +105,7 @@
             <div class="text-[#444242]">
                <p class="text-lg font-bold">ID# : 2122339642</p>
                <p class="text-lg font-bold">Email : anju.manowara@northsouth.edu</p>
-               <p class="text-lg font-bold ">Contact : +880182440184</p>
+               <p class="text-lg font-bold ">Contact : +8801786432578</p>
             </div>
 
 
@@ -135,7 +135,7 @@
             <div class="text-[#444242]">
                <p class="text-lg font-bold">ID# : 2211486042</p>
                <p class="text-lg font-bold">Email : adiba.ador@northsouth.edu</p>
-               <p class="text-lg font-bold ">Contact : +8801608239216</p>
+               <p class="text-lg font-bold ">Contact : +8801963470216</p>
             </div>
 
 
