@@ -296,7 +296,7 @@
             <div class="row row-cols-1 px-5  h-80  row-cols-md-3 g-4">
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/5.jpg" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/5.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -304,7 +304,7 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/6.jpg" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/6.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -312,7 +312,7 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/7.jpg" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/7.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -329,7 +329,7 @@
             <div class="row row-cols-1 px-5  h-80  row-cols-md-3 g-4">
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/8.jpg" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/8.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -345,7 +345,7 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/10.jpg" class="card-img-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/10.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
