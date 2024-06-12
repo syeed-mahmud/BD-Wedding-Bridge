@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "wedding_bridge";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en" data-theme="light">
 
@@ -206,12 +225,12 @@
               <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
               </h1>
               <p class=" fs-4 fw-semibold  my-3">Experience the Vibrant Traditions of Bangladeshi Weddings with BD Wedding Bridge.</p>
-              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
+              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="../signup.html">Sign up today</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img width="100%" height="100%" src="https://i.ibb.co/WsD0dQr/bannerpic1.jpg" class=" object-cover" alt="">
+          <img width="100%" height="100%" src="../../images/bannerpic1.jpg" class=" object-cover" alt="">
 
           <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
           <div class="container">
@@ -219,12 +238,12 @@
               <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
               </h1>
               <p class=" fs-4 fw-semibold  my-3">Dive into the Cultural Splendor of Bangladeshi Weddings with Expert Guidance.</p>
-              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
+              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="../signup.html">Sign up today</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img width="100%" height="100%" src="https://i.ibb.co/PYtRyfx/bannerpic2.jpg" alt="">
+          <img width="100%" height="100%" src="../../images/bannerpic2.jpg" alt="">
           <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
 
           <div class="container">
@@ -253,8 +272,8 @@
 
     <div class="container mx-auto marketing">
       <div class="text-center p-2 m-5 w-max mx-auto border-b-2 border-gray-200 border-dashed">
-        <p class="  fs-1 fw-normal">Upcoming WEDDINGS</p>
-        <h4 class=" fs-5 fw-normal">Join Most recent Weddings</h4>
+        <p class="  fs-1 fw-normal">Top WEDDINGS</p>
+        <h4 class=" fs-5 fw-normal">Join Most booked Weddings</h4>
       </div>
 
       <div id="carouselExampleIndicators" class="carousel h-80 w-100 mx-auto align-middle slide px-10 ">
@@ -424,136 +443,57 @@
 
         <hr class="featurette-divider">
 
-        <!-- FEATURED WEDDINGS Section -->
+        <!-- Upcoming WEDDINGS Section -->
         <section class=" bg-[#EBD7D7] shadow-xl py-5">
           <div class="text-center w-3/5 mx-auto">
-            <h1 class=" text-5xl mb-2">Featured Weddings</h1>
-            <p class="text-xl max-w-[350px] font-light mx-auto border-b-4 mb-4 pb-2 border-dashed">Helping students get
-              exposed to a world opportunities</p>
+            <h1 class=" text-5xl mb-2">Upcoming Weddings</h1>
+            <p class="text-xl max-w-[350px] font-light mx-auto border-b-4 mb-4 pb-2 border-dashed">Visit all the interesting Wedding in Bangladesh</p>
           </div>
 
           <div class="row row-cols-1 w-full px-5 mx-auto row-cols-md-3 g-4 ">
+
+          <?php
+// Query to retrieve all weddings
+$sql = "SELECT bg.WedReg_Id, G_first_name, B_first_name, event_start_date, event_end_date, event_location, wedding_image 
+FROM `bride-groom` bg
+JOIN weddingevent we ON bg.WedReg_Id = we.WedReg_Id
+ORDER BY we.event_start_date ASC LIMIT 6;";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $WedReg_id = $row["WedReg_Id"];
+        $BrideName = $row["B_first_name"];
+        $GroomName = $row["G_first_name"];
+        $StartDate = $row["event_start_date"];
+        $EndDate = $row["event_end_date"];
+        $Location = $row["event_location"];
+        $Image = $row["wedding_image"];
+
+        // Create a new card for each wedding
+        echo '
             <div class="col">
               <div class="card h-75 border-2 border-[#21C1BC] shadow-lg">
-                <img src="../../images/2.jpg" class="card-img-top h-100 object-cover" alt="...">
+                <img src="../../images/' . $Image . '" class="card-img-top h-100 object-cover" alt="...">
                 <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
+                  <h5 class="card-title text-xl">' . $BrideName . ' & ' . $GroomName . ' Wedding</h5>
 
                 </div>
                 <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
+                  <small class="text-body-secondary">Date : ' . $StartDate . '</small>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/3.jpg" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/4.png" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/5.jpg" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/6.jpg" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/7.jpg" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/8.jpg" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/9.jpg" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="../../images/10.jpg" class="card-img-top h-100 object-cover" alt="...">
-                <div class="card-body bg-[#EBD7D7]">
-                  <h5 class="card-title text-xl">Fahim & Israt’s
-                    Wedding</h5>
-
-                </div>
-                <div class="card-footer">
-                  <small class="text-body-secondary">DATE : 2 Jun, 2024</small>
-                </div>
-              </div>
-            </div>
+            ';
+    }
+} else {
+    echo "No weddings found.";
+}
+?>
 
           </div>
           <div class=" flex justify-center items-center mt-4">
-            <a href="#"
+            <a href="../wedding.php"
               class="btn btn-primary w-[200px] hover:text-blue-700 border-2 border-blue-400 bg-transparent text-blue-500">View
               More</a>
           </div>

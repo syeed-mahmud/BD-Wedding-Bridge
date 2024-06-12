@@ -48,16 +48,16 @@ if (isset($_GET['delete'])) {
 if (isset($_GET['delete_acc'])) {
     $delete_acc = $_GET['delete_acc'];
     // Prepare and execute delete statements with error checking
-    $stmt1 = $conn->prepare("DELETE FROM `users` WHERE id = ?");
-    $stmt1->bind_param("i", $user_id);
+    $stmt1 = $conn->prepare("DELETE FROM `regesterd_wedding` WHERE user_id = ?");
+    $stmt1->bind_param("i", $delete_acc);
 
-    $stmt2 = $conn->prepare("DELETE FROM `regesterd_wedding` WHERE user_id = ?");
-    $stmt2->bind_param("i", $user_id);
-    if ($stmt->execute()) {
-        header('location: login.php');
+    $stmt2 = $conn->prepare("DELETE FROM `users` WHERE id = ?");
+    $stmt2->bind_param("i", $delete_acc);
+    if ($stmt1->execute() && $stmt2->execute()) {
+        header('location: ../Back End/logout.php');
     }
     else{
-        echo "Error deleting from `regesterd_wedding`: " . $stmt1->error . $stmt2->error;
+        echo "Error deleting Profile: " . $stmt1->error . $stmt2->error;
         header('location: profile.php');
     exit();
     }    
@@ -144,7 +144,7 @@ if (isset($_GET['delete_acc'])) {
                         </div>
                     </div>
                     <div class="info-item flex flex-col items-start">
-                        <a href="#" class="delete-account">Delete Account</a>
+                        <a href="profile.php?delete_acc=<?php echo $user_id; ?>" class="delete-account">Delete Account</a>
                         <p class="">This Account Will No Longer Be Available, And All Your Saved Data Will Be
                             Permanently
                             Deleted.</p>
