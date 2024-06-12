@@ -25,7 +25,7 @@
              <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                <li><a href="../Front End/profile.php">Profile</a></li>
                <li><a  href="../Front End/login.php">Log In</a></li>
-               <li><a  href="../Front End/adminlogin.php">Admin Log In</a></li>
+               <li><a  href="../Front End/adminlogin.html">Admin Log In</a></li>
                <li><a  href="logout.php">Log out</a></li>
           </ul>
           </div>

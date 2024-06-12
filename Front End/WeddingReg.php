@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+  header("Location: login.php");
+  exit();
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,7 +127,7 @@
                 <input type="date" class="form-control" id="StartDate" name="StartDate"  required>
               </div>
               <div class="col-md-6">
-                <label for="EndDate" class="form-label">Start Date</label>
+                <label for="EndDate" class="form-label">End Date</label>
                 <input type="date" class="form-control" id="EndDate" name="EndDate" required>
               </div>
               

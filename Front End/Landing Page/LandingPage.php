@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <script src="color-modes.js"></script>
@@ -174,7 +174,7 @@
             Setting
           </a>
           <ul class="dropdown-menu dropdown-end">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="../profile.php">Profile</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -205,7 +205,7 @@
             <div class="carousel-caption bg-gradient-to-r from-slate-400 pl-8 text-start max-w-[30%] ">
               <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
               </h1>
-              <p class=" fs-4 fw-semibold  my-3">Some representative placeholder content for the first slide of the carousel.</p>
+              <p class=" fs-4 fw-semibold  my-3">Experience the Vibrant Traditions of Bangladeshi Weddings with BD Wedding Bridge.</p>
               <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
             </div>
           </div>
@@ -218,7 +218,7 @@
             <div class="carousel-caption bg-gradient-to-r from-slate-400 pl-8 text-start max-w-[30%] ">
               <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
               </h1>
-              <p class=" fs-4 fw-semibold  my-3">Some representative placeholder content for the first slide of the carousel.</p>
+              <p class=" fs-4 fw-semibold  my-3">Dive into the Cultural Splendor of Bangladeshi Weddings with Expert Guidance.</p>
               <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
             </div>
           </div>
@@ -231,7 +231,7 @@
             <div class="carousel-caption bg-gradient-to-r from-slate-400 pl-8 text-start max-w-[30%] ">
               <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
               </h1>
-              <p class=" fs-4 fw-semibold  my-3">Some representative placeholder content for the first slide of the carousel.</p>
+              <p class=" fs-4 fw-semibold  my-3">Celebrate in Style: Your Gateway to Authentic Bangladeshi Wedding Traditions.</p>
               <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
             </div>
           </div>
@@ -572,11 +572,11 @@
                   class="rounded-circle mx-auto w-[150px] h-[150px]" alt="">
                 <!-- <img src="../../images/1-4.jpg" class="card-img-top rounded-circle" alt="..."> -->
                 <div class="card-body text-center">
-                  <h5 class="card-title text-xl font-bold">Bill Gates <span>
-                      <p class=" text-base font-light text-gray-600">Guest, USA</p>
+                  <h5 class="card-title text-xl font-bold">Freya Xinn <span>
+                      <p class=" text-base font-light text-gray-600">Guest, Canda</p>
                     </span></h5>
 
-                  <p class="card-text">It was fantastic having BD Wedding Bridge team help me on my recent amazing trip
+                  <p class="card-text">Absolutely thrilled with the support from BD Wedding Bridge on my recent trip to Bangladesh! Their team made my cultural exploration seamless and unforgettable.
                     to Bangladesh</p>
                 </div>
               </div>
@@ -587,12 +587,11 @@
                   class="rounded-circle mx-auto w-[150px] h-[150px]" alt="">
                 <!-- <img src="../../images/1-4.jpg" class="card-img-top rounded-circle" alt="..."> -->
                 <div class="card-body text-center">
-                  <h5 class="card-title text-xl font-bold">Bill Gates <span>
-                      <p class=" text-base font-light text-gray-600">Guest, USA</p>
+                  <h5 class="card-title text-xl font-bold">Andrew Garfield <span>
+                      <p class=" text-base font-light text-gray-600">Guest, Finland</p>
                     </span></h5>
 
-                  <p class="card-text">It was fantastic having BD Wedding Bridge team help me on my recent amazing trip
-                    to Bangladesh</p>
+                  <p class="card-text">BD Wedding Bridge is incredibly helpful if you have a craving to enjoy and experience different cultural weddings.</p>
                 </div>
               </div>
             </div>
