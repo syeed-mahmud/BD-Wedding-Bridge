@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../Front End/login.html");
+    header("Location: ../Front End/login.php");
     exit();
 }
 
