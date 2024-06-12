@@ -232,7 +232,7 @@
               <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
               </h1>
               <p class=" fs-4 fw-semibold  my-3">Celebrate in Style: Your Gateway to Authentic Bangladeshi Wedding Traditions.</p>
-              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
+              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="../signup.html">Sign up today</a></p>
             </div>
           </div>
         </div>

@@ -35,13 +35,34 @@ if (isset($_GET['delete'])) {
     // Prepare and execute delete statements with error checking
     $stmt = $conn->prepare("DELETE FROM `regesterd_wedding` WHERE `Wed_id` = ? and user_id = ?");
     $stmt->bind_param("si", $delete_id, $user_id);
-    if (!$stmt->execute()) {
-        echo "Error deleting from `regesterd_wedding`: " . $stmt->error;
+    if ($stmt->execute()) {
+        header('location: profile.php');
     }
-
-    header('location: profile.php');
+    else{
+        echo "Error deleting from `regesterd_wedding`: " . $stmt->error;
+        header('location: profile.php');
     exit();
+    }    
 }
+
+if (isset($_GET['delete_acc'])) {
+    $delete_acc = $_GET['delete_acc'];
+    // Prepare and execute delete statements with error checking
+    $stmt1 = $conn->prepare("DELETE FROM `users` WHERE id = ?");
+    $stmt1->bind_param("i", $user_id);
+
+    $stmt2 = $conn->prepare("DELETE FROM `regesterd_wedding` WHERE user_id = ?");
+    $stmt2->bind_param("i", $user_id);
+    if ($stmt->execute()) {
+        header('location: login.php');
+    }
+    else{
+        echo "Error deleting from `regesterd_wedding`: " . $stmt1->error . $stmt2->error;
+        header('location: profile.php');
+    exit();
+    }    
+}
+
 ?>
 
 
@@ -137,7 +158,6 @@ if (isset($_GET['delete'])) {
             <hr class=" border-2 my-20">
 
             <!-- Registered weddings -->
-
             <div class="profile-header flex justify-center mt-20 mb-10 items-center">
                 <h2 class="label fs-1 border-b-4 border-dashed fw-5">Registered Wedding</h2>
             </div>
@@ -186,33 +206,6 @@ if (mysqli_num_rows($result) > 0) {
 ?>
             
             </div>
-
-            <!-- <hr class=" border-2 my-20"> -->
-
-            <!-- Hosted Wedding -->
-
-            <!-- <div class="profile-header flex justify-center mt-20 mb-10 items-center">
-                <h2 class="label fs-1 border-b-4 border-dashed fw-5">Hosted Wedding</h2>
-            </div>
-
-            <div class="grid grid-cols-4 gap-4 px-10">
-                <div class="card">
-                    <img src="../images/10.jpg" class="card-img-top" alt="...">
-                    <div class="card-body flex flex-col justify-center items-center">
-                        <h5 class="card-title pb-0 mb-0">Wedding</h5>
-                        <p class="card-text my-0">Name Of The Location</p>
-                        <p>Date : 23 Feb, 2024</p>
-                        
-                        <a href="#" class="btn btn-primary">Cancel</a>
-                        
-                      
-                    </div>
-                </div>
-              
-            </div> -->
-
-
-
 
         </div>
     </div>

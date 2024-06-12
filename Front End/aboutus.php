@@ -126,7 +126,7 @@
          <div class=" text-left mt-10 ">
 
             <h1 class="text-4xl text-black font-bold mb-1">Adiba Sarkar Adar</h1>
-            <h1 class="text-2xl text-black font-bold mb-4">Tester, Developer</h1>
+            <h1 class="text-2xl text-black font-bold mb-4">Web Tester, Developer</h1>
             <div class="flex items-center ">
 
                <div class=" min-w-[400px] border-t-4 border-black"></div>

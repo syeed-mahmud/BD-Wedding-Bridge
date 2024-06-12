@@ -92,7 +92,7 @@ if (isset($_GET['delete'])) {
                 <div class="flex justify-between items-center gap-4">
                     <div class="mb-3 flex-1">
                         <label for="news_link" class="form-label text-lg text-gray-900 font-semibold">Link</label>
-                        <input type="url" class="form-control input input-bordered w-full max-w-xs mt-2" id="news_link" name="news_link" required>
+                        <input type="url" class="form-control input input-bordered w-full max-w-xs mt-2" id="news_link" name="news_link" >
                     </div>
                     <div class="mb-3 flex-1">
                         <label for="news_img" class="form-label text-lg text-gray-900 font-semibold">Image URL</label>
@@ -124,16 +124,16 @@ if (isset($_GET['delete'])) {
                 <div class="flex justify-between items-center gap-4">
                     <div class="mb-3 flex-1">
                         <label for="update_link" class="form-label text-lg text-gray-900 font-semibold">New Link</label>
-                        <input type="url" class="form-control input input-bordered w-full max-w-xs mt-2" id="update_link" name="update_link" required>
+                        <input type="url" class="form-control input input-bordered w-full max-w-xs mt-2" id="update_link" name="update_link" >
                     </div>
                     <div class="mb-3 flex-1">
                         <label for="update_img" class="form-label text-lg text-gray-900 font-semibold">New Image URL</label>
-                        <input type="url" class="form-control input input-bordered w-full max-w-xs mt-2" id="update_img" name="update_img" required>
+                        <input type="url" class="form-control input input-bordered w-full max-w-xs mt-2" id="update_img" name="update_img" >
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="update_content" class="form-label text-lg text-gray-900 font-semibold">New Content</label>
-                    <textarea class="form-control input input-bordered w-full mt-2" id="update_content" name="update_content" required></textarea>
+                    <textarea class="form-control input input-bordered w-full mt-2" id="update_content" name="update_content" ></textarea>
                 </div>
                 <div class="flex justify-center items-center">
                     <button type="submit" class="btn btn-outline-light w-2/5 mx-auto fs-5">Update News</button>
