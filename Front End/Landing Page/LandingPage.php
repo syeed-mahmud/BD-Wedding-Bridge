@@ -106,13 +106,29 @@
     }
   </style>
 
+  <style>
+    .text-shadow {
+      text-shadow: 2px 2px 5px rgba(188, 87, 87, 1);
+    }
+
+    .relative-text::after {
+      content: 'BD Wedding bridge!';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #21C1BC;
+      z-index: -1;
+      transform: translate(5px, 5px);
+    }
+  </style>
+
 
   <!-- Custom styles for this template -->
   <link href="carousel.css" rel="stylesheet">
 </head>
 
-<body class="bg-[url('../../images/bgimg.png')]">
-  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+<body class=" pb-0 bg-[url('../../images/bgimg.png')]">
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
       <path
         d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
@@ -130,7 +146,7 @@
       <path
         d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
     </symbol>
-  </svg>
+  </svg> -->
 
 
   <nav class="navbar bg-body-tertiary sticky-top">
@@ -162,8 +178,8 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="../login.html">Log In</a></li>
-            <li><a class="dropdown-item" href="../adminlogin.html">Admin Log In</a></li>
+            <li><a class="dropdown-item" href="../login.php">Log In</a></li>
+            <li><a class="dropdown-item" href="../adminlogin.php">Admin Log In</a></li>
             <li><a class="dropdown-item" href="../../Back End/logout.php">Log out</a></li>
           </ul>
         </li>
@@ -171,7 +187,7 @@
     </div>
   </nav>
 
-  <main>
+  <main class=" ">
 
     <!-- Banner Section -->
     <div id="myCarousel" class="carousel  mx-auto slide mb-6" data-bs-ride="carousel">
@@ -182,41 +198,41 @@
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img width="100%" height="100%" src="https://i.ibb.co/fDQXPMS/7338686b0ccdef39452166acda07e033.jpg" alt="">
-
-          <!-- <svg class="bd-placeholder-img" width="100%" height="100%" 
-        xmlns="http://www.w3.org/2000/svg" 
-        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
+        <div class="carousel-item active ">
+          <img width="100%" height="100%" src="https://i.ibb.co/fDQXPMS/7338686b0ccdef39452166acda07e033.jpg" class=" "
+            alt="">
           <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>BD Wedding bridge!</h1>
-              <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <div class="carousel-caption bg-gradient-to-r from-slate-400 pl-8 text-start max-w-[30%] ">
+              <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
+              </h1>
+              <p class=" fs-4 fw-semibold  my-3">Some representative placeholder content for the first slide of the carousel.</p>
+              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img width="100%" height="100%" src="https://i.ibb.co/Zz6VWmT/bannerpng.png" alt="">
+          <img width="100%" height="100%" src="https://i.ibb.co/WsD0dQr/bannerpic1.jpg" class=" object-cover" alt="">
 
           <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
           <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Some representative placeholder content for the second slide of the carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <div class="carousel-caption bg-gradient-to-r from-slate-400 pl-8 text-start max-w-[30%] ">
+              <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
+              </h1>
+              <p class=" fs-4 fw-semibold  my-3">Some representative placeholder content for the first slide of the carousel.</p>
+              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img width="100%" height="100%" src="https://i.ibb.co/D4yyvwS/1-4.jpg" alt="">
+          <img width="100%" height="100%" src="https://i.ibb.co/PYtRyfx/bannerpic2.jpg" alt="">
           <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg> -->
 
           <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>Some representative placeholder content for the third slide of this carousel.</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <div class="carousel-caption bg-gradient-to-r from-slate-400 pl-8 text-start max-w-[30%] ">
+              <h1 class="text-7xl relative font-bold text-black text-shadow relative-text">BD Wedding bridge!
+              </h1>
+              <p class=" fs-4 fw-semibold  my-3">Some representative placeholder content for the first slide of the carousel.</p>
+              <p><a class="btn btn-lg bg-[#BC5757] border-[#21C1BC] hover:border-[#3eaca8] hover:bg-[#a03f3f] btn-primary font-semibold text-2xl " href="#">Sign up today</a></p>
             </div>
           </div>
         </div>
@@ -231,9 +247,6 @@
       </button>
     </div>
 
-
-
-
     <!-- Marketing messaging and featurettes
   ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -243,8 +256,6 @@
         <p class="  fs-1 fw-normal">Upcoming WEDDINGS</p>
         <h4 class=" fs-5 fw-normal">Join Most recent Weddings</h4>
       </div>
-
-
 
       <div id="carouselExampleIndicators" class="carousel h-80 w-100 mx-auto align-middle slide px-10 ">
         <div class="carousel-indicators ">
@@ -296,7 +307,8 @@
             <div class="row row-cols-1 px-5  h-80  row-cols-md-3 g-4">
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/5.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/5.jpg"
+                    class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -304,7 +316,8 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/6.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/6.jpg"
+                    class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -312,7 +325,8 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/7.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/7.jpg"
+                    class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -329,7 +343,8 @@
             <div class="row row-cols-1 px-5  h-80  row-cols-md-3 g-4">
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/8.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/8.jpg"
+                    class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -345,7 +360,8 @@
               </div>
               <div class="col rounded-2xl">
                 <div class="card h-80 border w-100">
-                  <img src="../../images/10.jpg" class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
+                  <img src="../../images/10.jpg"
+                    class="card-img-top object-cover object-top position-relative h-full w-full" alt="...">
                   <div class="position-absolute bottom-2 left-2 rounded min-w-fit px-2 bg-gradient-to-r from-gray-700 ">
                     <h5 class="card-title  font-semibold text-wrap text-white text-2xl ">Card title</h5>
                   </div>
@@ -372,9 +388,6 @@
         <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
-
-
-
         <!-- Our Mission Section -->
         <div class="text-center w-3/5 mx-auto">
           <h1 class=" text-6xl mb-2">Our Mission</h1>
@@ -419,7 +432,7 @@
               exposed to a world opportunities</p>
           </div>
 
-          <div class="row row-cols-1 mx-auto row-cols-md-3 g-4 " style="width: 70%;">
+          <div class="row row-cols-1 w-full px-5 mx-auto row-cols-md-3 g-4 ">
             <div class="col">
               <div class="card h-75 border-2 border-[#21C1BC] shadow-lg">
                 <img src="../../images/2.jpg" class="card-img-top h-100 object-cover" alt="...">
@@ -599,56 +612,58 @@
               </div>
             </div>
         </section>
-        >
+
 
         <!-- /END THE FEATURETTES -->
 
       </div>
-
+    </div>
   </main>
+
+
+  <footer class="bg-light mt-4">
+    <div class="grid  grid-cols-4">
+      <div class=" flex flex-col justify-center items-center">
+        <img src="../../images/2.png" class="w-[100px]" alt="">
+        <p class="font-semibold -mt-6">BD WEDDING BRIDGE</p>
+      </div>
+      <div class=" text-center flex flex-col justify-center items-center p-4">
+        <h1 class="text-lg text-blue-600 font-bold">Company</h1>
+        <div class="flex flex-col justify-center items-center">
+          <a href="#">About Us</a>
+          <a>contact us</a>
+          <a>Jobs</a>
+          <a>Press Kit</a>
+
+        </div>
+      </div>
+      <div class=" text-center flex flex-col justify-start items-center p-4">
+        <h1 class="text-lg text-blue-600 font-bold">Legal</h1>
+        <div class="flex flex-col justify-center items-center">
+
+          <a>Term of use</a>
+          <a>Refund policy</a>
+          <a>Privacy policy</a>
+        </div>
+      </div>
+      <div class=" flex flex-col justify-center items-center p-1 gap-1">
+        <h1 class="text-lg text-blue-600 font-bold">Social Media</h1>
+        <div class="flex flex-wrap justify-around gap-2">
+          <img src="../../images/fb.png" class="w-[30px]" alt="">
+          <img src="../../images/Instagram_logo.jpeg" class="w-[30px]" alt="">
+          <img src="../../images/LinkedIn_icon.png" class="w-[30px]" alt="">
+          <img src="../../images/yt.png" class="w-[30px]" alt="">
+          <img src="../../images/Telegram_logo.jpeg" class="w-[30px]" alt="">
+        </div>
+      </div>
+    </div>
+    <div class=" text-center py-2 ">
+      <small class="text-gray-400">&copy; 2024 BD Wedding Bridge Team, Inc. &middot; <a href="#">Privacy</a> &middot; <a
+          href="#">Terms</a></small>
+    </div>
+  </footer>
+
   <script src="bootstrap.bundle.min.js"></script>
-
-  <footer class="bg-light ">
-  <div class="grid  grid-cols-4">
-    <div class=" flex flex-col justify-center items-center">
-      <img src="../../images/2.png" class="w-[100px]" alt="">
-      <p class="font-semibold -mt-6">BD WEDDING BRIDGE</p>
-    </div>
-    <div class=" text-center flex flex-col justify-center items-center p-4">
-      <h1 class="text-lg text-blue-600 font-bold">Company</h1>
-      <div class="flex flex-col justify-center items-center">
-        <a href="#">About Us</a>
-        <a>contact us</a>
-        <a>Jobs</a>
-        <a>Press Kit</a>
-
-      </div>
-    </div>
-    <div class=" text-center flex flex-col justify-start items-center p-4">
-      <h1 class="text-lg text-blue-600 font-bold">Legal</h1>
-      <div class="flex flex-col justify-center items-center">
-
-        <a>Term of use</a>
-        <a>Refund policy</a>
-        <a>Privacy policy</a>
-      </div>
-    </div>
-    <div class=" flex flex-col justify-center items-center p-1 gap-1">
-      <h1 class="text-lg text-blue-600 font-bold">Social Media</h1>
-      <div class="flex flex-wrap justify-around gap-2">
-        <img src="../../images/fb.png" class="w-[30px]" alt="">
-        <img src="../../images/Instagram_logo.jpeg" class="w-[30px]" alt="">
-        <img src="../../images/LinkedIn_icon.png" class="w-[30px]" alt="">
-        <img src="../../images/yt.png" class="w-[30px]" alt="">
-        <img src="../../images/Telegram_logo.jpeg" class="w-[30px]" alt="">
-      </div>
-    </div>
-  </div>
-  <div class=" text-center py-2 ">
-    <small class="text-gray-400">&copy; 2024 BD Wedding Bridge Team, Inc. &middot; <a href="#">Privacy</a> &middot; <a
-        href="#">Terms</a></small>
-  </div>
-</footer>
 </body>
 
 </html>

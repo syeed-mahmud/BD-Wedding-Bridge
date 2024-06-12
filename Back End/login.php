@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate input
     if (empty($email) || empty($password)) {
-        echo "<script>alert('All fields are required.'); window.location.href = '../Front End/login.html';</script>";
+        echo "<script>alert('All fields are required.'); window.location.href = '../Front End/login.php';</script>";
     } else {
         // Check the database for the email
         $sql = "SELECT * FROM users WHERE email = ?";
@@ -39,10 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_name'] = $user['name'];
                 echo "<script>alert('Login successful.'); window.location.href = '../Front End/profile.php';</script>";
             } else {
-                echo "<script>alert('Wrong email or password.'); window.location.href = '../Front End/login.html';</script>";
+                echo "<script>alert('Wrong email or password.'); window.location.href = '../Front End/login.php';</script>";
             }
         } else {
-            echo "<script>alert('Wrong email or password.'); window.location.href = '../Front End/login.html';</script>";
+            echo "<script>alert('Wrong email or password.'); window.location.href = '../Front End/login.php';</script>";
         }
     }
 }

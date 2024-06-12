@@ -41,36 +41,38 @@ if (isset($_GET['delete'])) {
 </head>
 
 <?php
-include("adminheader.php");
+include ("adminheader.php");
 ?>
 
-<body class="container mx-auto bg-[url('../../images/bgimg.png')] py-10">
-    <h1 class="text-5xl border-b-4 mx-auto my-10 border-gray-400 border-dashed w-fit font-bold text-black">User List</h1>
+<body class="bg-[url('../../images/bgimg.png')] ">
+    <h1 class="text-5xl border-b-4 mx-auto my-10 border-gray-400 border-dashed w-fit font-bold text-black">User List
+    </h1>
 
-    <table class="table table-success border-4 table-striped-columns ">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">User Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Contract</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="min-h-[50vh]">
+        <table class=" table container mx-auto table-success border-4 mb-0 table-striped-columns ">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contract</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        <?php
-        // Query to retrieve all users
-        $sql = "SELECT * FROM users";
-        $result = mysqli_query($conn, $sql);
+                <?php
+                // Query to retrieve all users
+                $sql = "SELECT * FROM users";
+                $result = mysqli_query($conn, $sql);
 
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                $userid = $row["id"];
-                $UserName = $row["name"];
-                $UserEmail = $row["email"];
-                $UserPhone = $row["phone"];
-                echo '
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $userid = $row["id"];
+                        $UserName = $row["name"];
+                        $UserEmail = $row["email"];
+                        $UserPhone = $row["phone"];
+                        echo '
                     <tr>
                         <th scope="row">' . $userid . '</th>
                         <td>' . $UserName . '</td>
@@ -81,18 +83,22 @@ include("adminheader.php");
                         </td>
                     </tr>
                 ';
-            }
-        } else {
-            echo "No User found.";
-        }
-        ?>
+                    }
+                } else {
+                    echo "No User found.";
+                }
+                ?>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+
+    </div>
+
 
 </body>
+
 <?php
-include("adminfooter.php")
-?>
+include ("adminfooter.php")
+    ?>
 
 </html>

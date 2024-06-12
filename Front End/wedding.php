@@ -46,7 +46,7 @@ if (isset($_GET['view'])) {
 <?php
 include("header.php");
 ?>
-<div class="container grid grid-cols-4 gap-4">
+<div class="container min-h-[50vh] grid grid-cols-4 gap-4">
 <?php
 // Query to retrieve all weddings
 $sql = "SELECT `bride-groom`.WedReg_Id, G_first_name, B_first_name, event_start_date, event_end_date, event_location, wedding_image 
