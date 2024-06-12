@@ -28,7 +28,8 @@ if ($conn->connect_error) {
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.122.0">
-  <title>Carousel Template · Bootstrap v5.3</title>
+  <title>Home Page</title>
+  <link rel="icon" href="../../images/Logo.png" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -474,13 +475,15 @@ if (mysqli_num_rows($result) > 0) {
         echo '
             <div class="col">
               <div class="card h-75 border-2 border-[#21C1BC] shadow-lg">
-                <img src="../../images/' . $Image . '" class="card-img-top h-100 object-cover" alt="...">
+                <img src="../../images/' . $Image . '" class="card-img-top h-75 object-cover object-top" alt="...">
+                <div class="h-25">
                 <div class="card-body bg-[#EBD7D7]">
                   <h5 class="card-title text-xl">' . $BrideName . ' & ' . $GroomName . ' Wedding</h5>
 
                 </div>
                 <div class="card-footer">
                   <small class="text-body-secondary">Date : ' . $StartDate . '</small>
+                </div>
                 </div>
               </div>
             </div>

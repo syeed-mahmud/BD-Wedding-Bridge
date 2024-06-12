@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>About Us</title>
+    <link rel="icon" href="../images/Logo.png" type="image/x-icon">
    <script src="https://cdn.tailwindcss.com"></script>
 
    <link rel="stylesheet" href="../aboutus.css">
