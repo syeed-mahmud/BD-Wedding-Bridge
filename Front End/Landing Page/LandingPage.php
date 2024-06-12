@@ -179,7 +179,7 @@
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="../login.php">Log In</a></li>
-            <li><a class="dropdown-item" href="../adminlogin.php">Admin Log In</a></li>
+            <li><a class="dropdown-item" href="../adminlogin.html">Admin Log In</a></li>
             <li><a class="dropdown-item" href="../../Back End/logout.php">Log out</a></li>
           </ul>
         </li>
